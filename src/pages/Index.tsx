@@ -5,6 +5,7 @@ import MatchupsCard from "@/components/MatchupsCard";
 import TopPerformersCard from "@/components/TopPerformersCard";
 import NewsCard from "@/components/NewsCard";
 import TransactionsCard from "@/components/TransactionsCard";
+import XFeedCard from "@/components/XFeedCard";
 
 const Index = () => {
   return (
