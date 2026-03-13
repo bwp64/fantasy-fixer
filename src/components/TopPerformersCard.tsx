@@ -94,9 +94,6 @@ function playerImgUrl(id: string) {
   return `https://www.mflscripts.com/playerImages_96x96/mfl_${id}.png`;
 }
 
-function teamLogoUrl(team: string) {
-  return `https://www.mflscripts.com/ImageDirectory/script-images/nflTeamsvg_2/${team}.svg`;
-}
 
 export default function TopPerformersCard() {
   const [activeTab, setActiveTab] = useState<Position>("MVP");
