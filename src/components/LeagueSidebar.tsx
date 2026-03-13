@@ -1,21 +1,29 @@
 import { 
   Trophy, Users, Swords, ArrowRightLeft, BarChart3, 
-  FileText, Settings, ChevronDown, Zap, ListOrdered, Newspaper
+  FileText, Settings, ChevronDown, ListOrdered, Newspaper
 } from "lucide-react";
-import { NFLShield } from "./icons/NFLShield";
 import rivalriesLogo from "@/assets/rivalries-brand.svg";
-import { useState } from "react";
+import fingerprintIcon from "@/assets/icons/fingerprint.svg";
+import jerseyIcon from "@/assets/icons/jersey.svg";
+import lineChartsIcon from "@/assets/icons/line-charts.svg";
+import { useState, type ComponentType } from "react";
 
-const navItems = [
-  { icon: BarChart3, label: "Dashboard", active: true },
-  { icon: Trophy, label: "Standings" },
-  { icon: Swords, label: "Matchups" },
-  { icon: Users, label: "Rosters" },
-  { icon: ArrowRightLeft, label: "Add/Drop" },
-  { icon: ListOrdered, label: "Power Rank" },
-  { icon: FileText, label: "Draft Results" },
-  { icon: Newspaper, label: "Player Stats" },
-  { icon: Settings, label: "League Rules" },
+type NavItem = {
+  label: string;
+  svgSrc?: string;
+  lucideIcon?: ComponentType<{ className?: string }>;
+};
+
+const navItems: NavItem[] = [
+  { label: "Dashboard", lucideIcon: BarChart3 },
+  { label: "Standings", lucideIcon: Trophy },
+  { label: "Matchups", lucideIcon: Swords },
+  { label: "Rosters", svgSrc: jerseyIcon },
+  { label: "Add/Drop", lucideIcon: ArrowRightLeft },
+  { label: "Power Rank", svgSrc: lineChartsIcon },
+  { label: "Draft Results", lucideIcon: FileText },
+  { label: "Player Stats", lucideIcon: Newspaper },
+  { label: "Login", svgSrc: fingerprintIcon },
 ];
 
 export default function LeagueSidebar() {
@@ -44,7 +52,16 @@ export default function LeagueSidebar() {
                   : "text-sidebar-muted hover:text-sidebar-foreground hover:bg-sidebar-accent/50"
               }`}
             >
-              <item.icon className="w-4 h-4 shrink-0" />
+              {item.svgSrc ? (
+                <img
+                  src={item.svgSrc}
+                  alt=""
+                  className="w-[18px] h-[18px] shrink-0 opacity-70"
+                  style={{ filter: "brightness(0) invert(0.6)" }}
+                />
+              ) : item.lucideIcon ? (
+                <item.lucideIcon className="w-[18px] h-[18px] shrink-0" />
+              ) : null}
               {item.label}
             </button>
           );
