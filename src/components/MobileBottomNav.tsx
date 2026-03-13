@@ -1,18 +1,17 @@
 import homeIcon from "@/assets/icons/home.svg";
+import standingsIcon from "@/assets/icons/standings.svg";
 import matchupsIcon from "@/assets/icons/matchups-2.svg";
 import calendarIcon from "@/assets/icons/calendar.svg";
 import jerseyIcon from "@/assets/icons/jersey-2.svg";
-import { Trophy } from "lucide-react";
 
 type Tab = {
   label: string;
-  svgSrc?: string;
-  lucideIcon?: React.ReactNode;
+  svgSrc: string;
 };
 
 const tabs: Tab[] = [
   { label: "Home", svgSrc: homeIcon },
-  { label: "Standings", lucideIcon: <Trophy className="w-5 h-5" /> },
+  { label: "Standings", svgSrc: standingsIcon },
   { label: "Matchups", svgSrc: matchupsIcon },
   { label: "Schedule", svgSrc: calendarIcon },
   { label: "Rosters", svgSrc: jerseyIcon },
@@ -40,8 +39,7 @@ export default function MobileBottomNav({
                   : "text-sidebar-muted"
               }`}
             >
-              {tab.svgSrc ? (
-                <img
+              <img
                   src={tab.svgSrc}
                   alt=""
                   className="w-5 h-5"
@@ -50,10 +48,7 @@ export default function MobileBottomNav({
                       ? "brightness(0) invert(0.75) sepia(1) saturate(3) hue-rotate(180deg)"
                       : "brightness(0) invert(0.55)",
                   }}
-                />
-              ) : (
-                tab.lucideIcon
-              )}
+              />
               <span className="text-[9px] font-heading font-bold uppercase tracking-wider">
                 {tab.label}
               </span>
