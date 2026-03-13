@@ -39,8 +39,7 @@ export default function MobileBottomNav({
                   : "text-sidebar-muted"
               }`}
             >
-              {tab.svgSrc ? (
-                <img
+              <img
                   src={tab.svgSrc}
                   alt=""
                   className="w-5 h-5"
@@ -49,10 +48,7 @@ export default function MobileBottomNav({
                       ? "brightness(0) invert(0.75) sepia(1) saturate(3) hue-rotate(180deg)"
                       : "brightness(0) invert(0.55)",
                   }}
-                />
-              ) : (
-                tab.lucideIcon
-              )}
+              />
               <span className="text-[9px] font-heading font-bold uppercase tracking-wider">
                 {tab.label}
               </span>
