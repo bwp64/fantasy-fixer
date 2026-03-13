@@ -1,3 +1,6 @@
+import { useState } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+
 const matchups = [
   { home: "Chiefs", homeAbbr: "KC", away: "Saints", awayAbbr: "NO" },
   { home: "Bengals", homeAbbr: "CIN", away: "49ers", awayAbbr: "SF" },
@@ -7,14 +10,36 @@ const matchups = [
   { home: "Texans", homeAbbr: "HOU", away: "Eagles", awayAbbr: "PHI" },
 ];
 
+const TOTAL_WEEKS = 14;
+
 export default function MatchupsCard() {
+  const [week, setWeek] = useState(1);
+
   return (
     <div className="bg-card rounded-lg border border-border">
       <div className="px-5 py-3.5 border-b border-border flex items-center justify-between">
         <h3 className="font-heading text-sm font-bold uppercase tracking-wide text-card-foreground">
           Matchups
         </h3>
-        <span className="text-[11px] font-medium text-muted-foreground uppercase tracking-wider">Preseason</span>
+        <div className="flex items-center gap-1">
+          <button
+            onClick={() => setWeek((w) => Math.max(1, w - 1))}
+            disabled={week === 1}
+            className="w-6 h-6 flex items-center justify-center text-muted-foreground hover:text-card-foreground disabled:opacity-30 transition-colors"
+          >
+            <ChevronLeft className="w-3.5 h-3.5" />
+          </button>
+          <span className="text-[11px] font-heading font-bold uppercase tracking-wider text-muted-foreground min-w-[52px] text-center">
+            Week {week}
+          </span>
+          <button
+            onClick={() => setWeek((w) => Math.min(TOTAL_WEEKS, w + 1))}
+            disabled={week === TOTAL_WEEKS}
+            className="w-6 h-6 flex items-center justify-center text-muted-foreground hover:text-card-foreground disabled:opacity-30 transition-colors"
+          >
+            <ChevronRight className="w-3.5 h-3.5" />
+          </button>
+        </div>
       </div>
       <div className="divide-y divide-border">
         {matchups.map((m, i) => (
