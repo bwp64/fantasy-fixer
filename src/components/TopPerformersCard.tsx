@@ -140,12 +140,6 @@ export default function TopPerformersCard() {
                 className={`w-10 h-10 rounded-full object-cover ring-2 ${posBorderMap[p.pos] || "ring-border"} bg-secondary`}
                 loading="lazy"
               />
-              <img
-                src={teamLogoUrl(p.team)}
-                alt=""
-                className="absolute -bottom-0.5 -right-0.5 w-4.5 h-4.5 rounded-full bg-card"
-                loading="lazy"
-              />
             </div>
 
             <div className="flex-1 min-w-0">
