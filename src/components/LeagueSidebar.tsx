@@ -1,0 +1,74 @@
+import { 
+  Trophy, Users, Swords, ArrowRightLeft, BarChart3, 
+  FileText, Settings, ChevronDown, Zap 
+} from "lucide-react";
+import { useState } from "react";
+
+const navItems = [
+  { icon: BarChart3, label: "Dashboard", active: true },
+  { icon: Trophy, label: "Standings" },
+  { icon: Swords, label: "Matchups" },
+  { icon: Users, label: "Rosters" },
+  { icon: ArrowRightLeft, label: "Waivers" },
+  { icon: FileText, label: "Draft Board" },
+  { icon: Zap, label: "Transactions" },
+  { icon: Settings, label: "Settings" },
+];
+
+export default function LeagueSidebar() {
+  const [active, setActive] = useState("Dashboard");
+
+  return (
+    <aside className="w-64 min-h-screen bg-sidebar flex flex-col shrink-0">
+      {/* League Header */}
+      <div className="p-5 border-b border-sidebar-border">
+        <div className="flex items-center gap-3">
+          <div className="w-10 h-10 rounded-lg bg-sidebar-accent flex items-center justify-center">
+            <Trophy className="w-5 h-5 text-sidebar-primary" />
+          </div>
+          <div className="min-w-0">
+            <h2 className="font-heading text-sm font-semibold text-sidebar-foreground uppercase tracking-wide truncate">
+              Dynasty League
+            </h2>
+            <p className="text-xs text-sidebar-muted">2026 Season</p>
+          </div>
+        </div>
+      </div>
+
+      {/* Navigation */}
+      <nav className="flex-1 p-3 space-y-1">
+        {navItems.map((item) => {
+          const isActive = active === item.label;
+          return (
+            <button
+              key={item.label}
+              onClick={() => setActive(item.label)}
+              className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-md text-sm font-medium transition-colors duration-100 ${
+                isActive
+                  ? "bg-sidebar-accent text-sidebar-primary"
+                  : "text-sidebar-muted hover:text-sidebar-foreground hover:bg-sidebar-accent/50"
+              }`}
+            >
+              <item.icon className="w-4 h-4 shrink-0" />
+              {item.label}
+            </button>
+          );
+        })}
+      </nav>
+
+      {/* User */}
+      <div className="p-4 border-t border-sidebar-border">
+        <button className="w-full flex items-center gap-3 text-left">
+          <div className="w-8 h-8 rounded-full bg-sidebar-primary flex items-center justify-center text-sidebar-primary-foreground text-xs font-bold">
+            BP
+          </div>
+          <div className="flex-1 min-w-0">
+            <p className="text-sm font-medium text-sidebar-foreground truncate">Brent Powers</p>
+            <p className="text-xs text-sidebar-muted">Team Owner</p>
+          </div>
+          <ChevronDown className="w-4 h-4 text-sidebar-muted" />
+        </button>
+      </div>
+    </aside>
+  );
+}
