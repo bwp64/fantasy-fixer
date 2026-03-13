@@ -1,5 +1,4 @@
 import { 
-  Trophy, BarChart3, 
   ChevronDown, Menu, X
 } from "lucide-react";
 import rivalriesLogo from "@/assets/rivalries-brand.svg";
@@ -10,17 +9,18 @@ import matchupsIcon from "@/assets/icons/matchups.svg";
 import powerRankIcon from "@/assets/icons/power-rank.svg";
 import liveScoringIcon from "@/assets/icons/live-scoring.svg";
 import banknoteIcon from "@/assets/icons/banknote.svg";
-import { useState, useEffect, type ComponentType } from "react";
+import homeIcon from "@/assets/icons/home.svg";
+import standingsIcon from "@/assets/icons/standings.svg";
+import { useState, useEffect } from "react";
 
 type NavItem = {
   label: string;
-  svgSrc?: string;
-  lucideIcon?: ComponentType<{ className?: string }>;
+  svgSrc: string;
 };
 
 const navItems: NavItem[] = [
-  { label: "Dashboard", lucideIcon: BarChart3 },
-  { label: "Standings", lucideIcon: Trophy },
+  { label: "Dashboard", svgSrc: homeIcon },
+  { label: "Standings", svgSrc: standingsIcon },
   { label: "Matchups", svgSrc: matchupsIcon },
   { label: "Rosters", svgSrc: jerseyIcon },
   { label: "Transactions", svgSrc: banknoteIcon },
