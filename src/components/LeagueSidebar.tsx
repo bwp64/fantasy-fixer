@@ -2,6 +2,7 @@ import {
   Trophy, Users, Swords, ArrowRightLeft, BarChart3, 
   FileText, Settings, ChevronDown, Zap, ListOrdered, Newspaper
 } from "lucide-react";
+import { NFLShield } from "./icons/NFLShield";
 import { useState } from "react";
 
 const navItems = [
