@@ -94,9 +94,6 @@ function playerImgUrl(id: string) {
   return `https://www.mflscripts.com/playerImages_96x96/mfl_${id}.png`;
 }
 
-function teamLogoUrl(team: string) {
-  return `https://www.mflscripts.com/ImageDirectory/script-images/nflTeamsvg_2/${team}.svg`;
-}
 
 export default function TopPerformersCard() {
   const [activeTab, setActiveTab] = useState<Position>("MVP");
@@ -141,12 +138,6 @@ export default function TopPerformersCard() {
                 src={playerImgUrl(p.playerId)}
                 alt=""
                 className={`w-10 h-10 rounded-full object-cover ring-2 ${posBorderMap[p.pos] || "ring-border"} bg-secondary`}
-                loading="lazy"
-              />
-              <img
-                src={teamLogoUrl(p.team)}
-                alt=""
-                className="absolute -bottom-0.5 -right-0.5 w-4.5 h-4.5 rounded-full bg-card"
                 loading="lazy"
               />
             </div>
