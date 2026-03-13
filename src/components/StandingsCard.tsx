@@ -27,7 +27,7 @@ export default function StandingsCard() {
   const [activeDivision, setActiveDivision] = useState<Division>("American");
 
   return (
-    <div className="bg-card rounded-lg border border-border">
+    <div className="bg-card rounded-lg card-glow">
       <div className="px-5 py-4 border-b border-border flex items-center justify-between">
         <h3 className="font-heading text-lg font-semibold uppercase tracking-wide text-card-foreground">
           Standings

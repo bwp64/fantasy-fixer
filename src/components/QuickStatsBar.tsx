@@ -11,7 +11,7 @@ export default function QuickStatsBar() {
   return (
     <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
       {stats.map((s) => (
-        <div key={s.label} className="bg-card rounded-lg border border-border px-5 py-4">
+        <div key={s.label} className="bg-card rounded-lg card-glow px-5 py-4">
           <div className="flex items-center gap-2 text-muted-foreground mb-1">
             <s.icon className="w-4 h-4" />
             <span className="text-xs font-medium uppercase tracking-wider">{s.label}</span>
