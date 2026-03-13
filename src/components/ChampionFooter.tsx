@@ -1,22 +1,16 @@
-import { Trophy } from "lucide-react";
-
 export default function ChampionFooter() {
   return (
-    <footer className="bg-card border-t border-border card-glow py-4 md:py-6 mt-4 md:mt-6 mx-4 md:mx-6 lg:mx-8 mb-4 md:mb-6 rounded-lg">
-      <div className="flex flex-col items-center gap-3">
-        <div className="flex items-center gap-2 text-muted-foreground">
-          <Trophy className="w-4 h-4 text-accent" />
-          <span className="text-xs font-heading font-semibold uppercase tracking-wider">
-            Defending League Champions
-          </span>
-          <Trophy className="w-4 h-4 text-accent" />
-        </div>
+    <footer className="border-t border-border py-5 mx-4 md:mx-6 lg:mx-8">
+      <div className="flex flex-col items-center gap-2.5">
+        <span className="text-[11px] font-heading font-bold uppercase tracking-widest text-muted-foreground">
+          Defending Champions
+        </span>
         <img
           src="http://mfladdons.com/graphics/brent/KC24%20copy.png"
-          alt="Chiefs - Defending Champions"
-          className="h-[50px] w-[300px] object-contain"
+          alt="Chiefs"
+          className="h-[44px] w-[260px] object-contain"
         />
-        <p className="text-xs text-muted-foreground">2025 Season Champions</p>
+        <span className="text-[11px] text-muted-foreground">2025 Season</span>
       </div>
     </footer>
   );

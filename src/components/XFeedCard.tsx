@@ -1,8 +1,6 @@
 import { useEffect, useRef } from "react";
-import { Twitter } from "lucide-react";
 
-// Replace this with your actual Twitter List URL or username
-const TWITTER_SOURCE = "MyFantasyLeague"; // Can be a username or list ID
+const TWITTER_SOURCE = "MyFantasyLeague";
 
 declare global {
   interface Window {
@@ -33,7 +31,7 @@ export default function XFeedCard() {
         {
           theme: "dark",
           chrome: "noheader nofooter noborders transparent",
-          height: 500,
+          height: 400,
           width: "100%",
           dnt: true,
         }
@@ -56,23 +54,22 @@ export default function XFeedCard() {
   }, []);
 
   return (
-    <div className="bg-card rounded-lg card-glow">
-      <div className="px-5 py-4 border-b border-border flex items-center justify-between">
-        <h3 className="font-heading text-lg font-semibold uppercase tracking-wide text-card-foreground flex items-center gap-2">
-          <Twitter className="w-4 h-4 text-accent" />
-          X Feed
+    <div className="bg-card rounded-lg border border-border">
+      <div className="px-5 py-3.5 border-b border-border flex items-center justify-between">
+        <h3 className="font-heading text-sm font-bold uppercase tracking-wide text-card-foreground">
+          Feed
         </h3>
         <a
           href={`https://x.com/${TWITTER_SOURCE}`}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-xs font-medium text-accent hover:underline"
+          className="text-[11px] font-medium text-muted-foreground hover:text-accent transition-colors"
         >
           @{TWITTER_SOURCE}
         </a>
       </div>
       <div ref={containerRef} className="min-h-[200px] flex items-center justify-center">
-        <p className="text-sm text-muted-foreground">Loading feed...</p>
+        <p className="text-sm text-muted-foreground">Loading…</p>
       </div>
     </div>
   );
