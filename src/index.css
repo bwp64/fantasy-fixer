@@ -1,11 +1,18 @@
-@import url('@fontsource/oswald/400.css');
-@import url('@fontsource/oswald/500.css');
-@import url('@fontsource/oswald/600.css');
-@import url('@fontsource/oswald/700.css');
-@import url('@fontsource/inter/400.css');
-@import url('@fontsource/inter/500.css');
-@import url('@fontsource/inter/600.css');
-@import url('@fontsource/inter/700.css');
+@font-face {
+  font-family: 'SF Compact Display';
+  src: url('/fonts/SF-Compact-Display-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SF Compact Text';
+  src: url('/fonts/SF-Compact-Text-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 
 @tailwind base;
 @tailwind components;
