@@ -40,17 +40,16 @@ const Index = () => {
   };
 
   return (
-    <div className="flex min-h-screen bg-background">
-      {/* Desktop sidebar */}
-      <div className="hidden lg:block">
-        <LeagueSidebar />
-      </div>
+    <div className="flex flex-col min-h-screen bg-background">
+      {/* Desktop top nav bar */}
+      <LeagueSidebar active={activeTab} onNavigate={setActiveTab} />
+
+      {/* Mobile top bar — just logo */}
+      <header className="lg:hidden sticky top-0 z-40 bg-sidebar border-b border-border px-4 py-3 flex items-center justify-center">
+        <img src={rivalriesLogo} alt="Rivalries" className="h-5" />
+      </header>
 
       <div className="flex-1 min-w-0 flex flex-col">
-        {/* Mobile top bar — just logo */}
-        <header className="lg:hidden sticky top-0 z-40 bg-sidebar border-b border-border px-4 py-3 flex items-center justify-center">
-          <img src={rivalriesLogo} alt="Rivalries" className="h-5" />
-        </header>
 
         <main className="flex-1 p-4 md:p-6 lg:p-8 pb-20 lg:pb-8 overflow-auto">
           <LeagueStatusBar />
