@@ -112,16 +112,12 @@ export default function LeagueSidebar({
                     : "text-sidebar-muted hover:text-sidebar-foreground hover:bg-sidebar-accent/50"
                 }`}
               >
-                {item.svgSrc ? (
-                  <img
-                    src={item.svgSrc}
-                    alt=""
-                    className="w-[16px] h-[16px] shrink-0 opacity-60"
-                    style={{ filter: "brightness(0) invert(0.55)" }}
-                  />
-                ) : item.lucideIcon ? (
-                  <item.lucideIcon className="w-4 h-4 shrink-0" />
-                ) : null}
+                <img
+                  src={item.svgSrc}
+                  alt=""
+                  className="w-[16px] h-[16px] shrink-0 opacity-60"
+                  style={{ filter: "brightness(0) invert(0.55)" }}
+                />
                 {item.label}
               </button>
             );
