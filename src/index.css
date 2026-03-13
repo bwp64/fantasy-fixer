@@ -66,8 +66,8 @@
     --sidebar-ring: 217 91% 60%;
     --sidebar-muted: 215 16% 47%;
 
-    --font-heading: 'Oswald', sans-serif;
-    --font-body: 'Inter', sans-serif;
+    --font-heading: 'SF Compact Display', sans-serif;
+    --font-body: 'SF Compact Text', sans-serif;
   }
 
   .dark {
