@@ -1,7 +1,6 @@
 import { useState } from "react";
-import { TrendingUp } from "lucide-react";
 
-const positions = ["MVP", "QB's", "RB's", "WR's", "TE's"] as const;
+const positions = ["MVP", "QB", "RB", "WR", "TE"] as const;
 type Position = typeof positions[number];
 
 type Player = {
@@ -15,7 +14,7 @@ type Player = {
 };
 
 const topPlayers: Record<Position, Player[]> = {
-  "MVP": [
+  MVP: [
     { rank: 1, firstName: "Josh", lastName: "Allen", pos: "QB", team: "BUF", pts: 412.8, playerId: "12626" },
     { rank: 2, firstName: "Saquon", lastName: "Barkley", pos: "RB", team: "PHI", pts: 389.4, playerId: "13604" },
     { rank: 3, firstName: "Ja'Marr", lastName: "Chase", pos: "WR", team: "CIN", pts: 371.2, playerId: "15048" },
@@ -27,7 +26,7 @@ const topPlayers: Record<Position, Player[]> = {
     { rank: 9, firstName: "Amon-Ra", lastName: "St. Brown", pos: "WR", team: "DET", pts: 298.5, playerId: "15064" },
     { rank: 10, firstName: "Sam", lastName: "LaPorta", pos: "TE", team: "DET", pts: 284.1, playerId: "15836" },
   ],
-  "QB's": [
+  QB: [
     { rank: 1, firstName: "Josh", lastName: "Allen", pos: "QB", team: "BUF", pts: 412.8, playerId: "12626" },
     { rank: 2, firstName: "Lamar", lastName: "Jackson", pos: "QB", team: "BAL", pts: 358.6, playerId: "13593" },
     { rank: 3, firstName: "Jalen", lastName: "Hurts", pos: "QB", team: "PHI", pts: 324.9, playerId: "14836" },
@@ -39,7 +38,7 @@ const topPlayers: Record<Position, Player[]> = {
     { rank: 9, firstName: "Dak", lastName: "Prescott", pos: "QB", team: "DAL", pts: 253.1, playerId: "12199" },
     { rank: 10, firstName: "Jordan", lastName: "Love", pos: "QB", team: "GB", pts: 241.5, playerId: "14839" },
   ],
-  "RB's": [
+  RB: [
     { rank: 1, firstName: "Saquon", lastName: "Barkley", pos: "RB", team: "PHI", pts: 389.4, playerId: "13604" },
     { rank: 2, firstName: "Bijan", lastName: "Robinson", pos: "RB", team: "ATL", pts: 345.1, playerId: "15818" },
     { rank: 3, firstName: "Breece", lastName: "Hall", pos: "RB", team: "NYJ", pts: 312.3, playerId: "15356" },
@@ -51,7 +50,7 @@ const topPlayers: Record<Position, Player[]> = {
     { rank: 9, firstName: "Josh", lastName: "Jacobs", pos: "RB", team: "GB", pts: 231.3, playerId: "13672" },
     { rank: 10, firstName: "Isiah", lastName: "Pacheco", pos: "RB", team: "KC", pts: 218.7, playerId: "15353" },
   ],
-  "WR's": [
+  WR: [
     { rank: 1, firstName: "Ja'Marr", lastName: "Chase", pos: "WR", team: "CIN", pts: 371.2, playerId: "15048" },
     { rank: 2, firstName: "CeeDee", lastName: "Lamb", pos: "WR", team: "DAL", pts: 332.7, playerId: "14803" },
     { rank: 3, firstName: "Amon-Ra", lastName: "St. Brown", pos: "WR", team: "DET", pts: 298.5, playerId: "15064" },
@@ -63,7 +62,7 @@ const topPlayers: Record<Position, Player[]> = {
     { rank: 9, firstName: "Justin", lastName: "Jefferson", pos: "WR", team: "MIN", pts: 234.7, playerId: "14834" },
     { rank: 10, firstName: "Puka", lastName: "Nacua", pos: "WR", team: "LAR", pts: 223.2, playerId: "15862" },
   ],
-  "TE's": [
+  TE: [
     { rank: 1, firstName: "Sam", lastName: "LaPorta", pos: "TE", team: "DET", pts: 284.1, playerId: "15836" },
     { rank: 2, firstName: "Trey", lastName: "McBride", pos: "TE", team: "AZ", pts: 248.6, playerId: "15376" },
     { rank: 3, firstName: "Travis", lastName: "Kelce", pos: "TE", team: "KC", pts: 231.4, playerId: "10738" },
@@ -78,17 +77,17 @@ const topPlayers: Record<Position, Player[]> = {
 };
 
 const posColorMap: Record<string, string> = {
-  QB: "bg-accent text-accent-foreground",
-  RB: "bg-success text-success-foreground",
-  WR: "bg-amber-500 text-card",
-  TE: "bg-purple-500 text-card",
+  QB: "bg-pos-qb text-accent-foreground",
+  RB: "bg-pos-rb text-success-foreground",
+  WR: "bg-pos-wr text-primary-foreground",
+  TE: "bg-pos-te text-accent-foreground",
 };
 
 const posBorderMap: Record<string, string> = {
-  QB: "ring-accent",
-  RB: "ring-success",
-  WR: "ring-amber-500",
-  TE: "ring-purple-500",
+  QB: "ring-pos-qb",
+  RB: "ring-pos-rb",
+  WR: "ring-pos-wr",
+  TE: "ring-pos-te",
 };
 
 function playerImgUrl(id: string) {
@@ -103,21 +102,19 @@ export default function TopPerformersCard() {
   const [activeTab, setActiveTab] = useState<Position>("MVP");
 
   return (
-    <div className="bg-card rounded-lg card-glow">
-      <div className="px-5 py-4 border-b border-border">
-        <h3 className="font-heading text-lg font-semibold uppercase tracking-wide text-card-foreground flex items-center gap-2">
-          <TrendingUp className="w-4 h-4 text-accent" />
-          Top 10 Players
+    <div className="bg-card rounded-lg border border-border">
+      <div className="px-5 py-3.5 border-b border-border">
+        <h3 className="font-heading text-sm font-bold uppercase tracking-wide text-card-foreground">
+          Top Performers
         </h3>
       </div>
 
-      {/* Tabs */}
       <div className="flex border-b border-border">
         {positions.map((tab) => (
           <button
             key={tab}
             onClick={() => setActiveTab(tab)}
-            className={`flex-1 px-3 py-2.5 text-xs font-heading font-semibold uppercase tracking-wider transition-colors duration-75 ${
+            className={`flex-1 px-3 py-2.5 text-xs font-heading font-bold uppercase tracking-wider transition-colors ${
               activeTab === tab
                 ? "text-accent border-b-2 border-accent"
                 : "text-muted-foreground hover:text-card-foreground"
@@ -128,68 +125,41 @@ export default function TopPerformersCard() {
         ))}
       </div>
 
-      {/* Player List */}
       <div className="divide-y divide-border">
-        {topPlayers[activeTab].map((p, i) => (
+        {topPlayers[activeTab].map((p) => (
           <a
             key={`${activeTab}-${p.playerId}`}
             href={`https://www44.myfantasyleague.com/2026/player?L=57893&P=${p.playerId}`}
             target="_blank"
             rel="noopener noreferrer"
-            title={`${p.firstName} ${p.lastName} (${p.team}) ${p.pos}`}
-            aria-label={`${p.firstName} ${p.lastName} (${p.team}) ${p.pos}`}
-            data-player-id={p.playerId}
-            data-pos={p.pos}
-            data-team={p.team}
-            className="flex items-center px-3 md:px-5 py-2.5 hover:bg-muted/50 active:bg-muted/50 transition-colors duration-75 animate-fade-in group"
-            style={{ animationDelay: `${i * 30}ms`, animationFillMode: "both" }}
+            className="flex items-center px-4 py-2.5 hover:bg-secondary/50 transition-colors group"
           >
-            {/* Rank */}
-            <span className="w-6 text-sm font-heading font-bold text-muted-foreground">{p.rank}</span>
+            <span className="w-5 text-xs font-heading font-bold text-muted-foreground tabular-nums">{p.rank}</span>
 
-            {/* Player Photo with Team Logo + Position Badge */}
-            <div className="relative w-11 h-11 shrink-0 mr-3">
+            <div className="relative w-10 h-10 shrink-0 mx-2.5">
               <img
                 src={playerImgUrl(p.playerId)}
-                alt={`${p.lastName} ${p.firstName}`}
-                className={`w-11 h-11 rounded-full object-cover ring-2 ${posBorderMap[p.pos] || "ring-border"} bg-muted`}
+                alt=""
+                className={`w-10 h-10 rounded-full object-cover ring-2 ${posBorderMap[p.pos] || "ring-border"} bg-secondary`}
                 loading="lazy"
-                decoding="async"
               />
               <img
                 src={teamLogoUrl(p.team)}
                 alt=""
-                aria-hidden="true"
-                className="absolute -bottom-0.5 -right-0.5 w-5 h-5 rounded-full bg-card shadow-sm"
+                className="absolute -bottom-0.5 -right-0.5 w-4.5 h-4.5 rounded-full bg-card"
                 loading="lazy"
-                decoding="async"
               />
-              <div
-                className={`absolute -top-0.5 -left-0.5 w-4.5 h-4.5 rounded-full flex items-center justify-center text-[8px] font-bold ${posColorMap[p.pos] || "bg-muted text-muted-foreground"}`}
-                aria-hidden="true"
-                title={`Position: ${p.pos}`}
-              >
-                {p.pos}
-              </div>
             </div>
 
-            {/* Player Name */}
             <div className="flex-1 min-w-0">
-              <div className="text-xs font-heading font-bold uppercase tracking-wide text-card-foreground group-hover:text-accent transition-colors">
-                {p.lastName}
-              </div>
+              <span className="text-sm font-medium text-card-foreground group-hover:text-accent transition-colors">
+                {p.firstName} {p.lastName}
+              </span>
               <div className="text-[11px] text-muted-foreground">
-                {p.firstName}
+                {p.pos} · {p.team}
               </div>
             </div>
 
-            {/* Team & Position */}
-            <div className="text-right mr-3 hidden sm:block">
-              <div className="text-xs font-medium text-muted-foreground">{p.pos}</div>
-              <div className="text-[11px] text-muted-foreground">{p.team}</div>
-            </div>
-
-            {/* Points */}
             <span className="text-sm font-heading font-bold tabular-nums text-card-foreground w-14 text-right">
               {p.pts.toFixed(1)}
             </span>
@@ -204,7 +174,7 @@ export default function TopPerformersCard() {
           rel="noopener noreferrer"
           className="text-xs font-medium text-accent hover:underline"
         >
-          View All Top Performers →
+          View All →
         </a>
       </div>
     </div>
