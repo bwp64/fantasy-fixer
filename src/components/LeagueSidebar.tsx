@@ -1,11 +1,14 @@
 import { 
-  Trophy, Users, Swords, ArrowRightLeft, BarChart3, 
-  FileText, Settings, ChevronDown, ListOrdered, Newspaper
+  Trophy, ArrowRightLeft, BarChart3, 
+  FileText, Settings, ChevronDown
 } from "lucide-react";
 import rivalriesLogo from "@/assets/rivalries-brand.svg";
 import fingerprintIcon from "@/assets/icons/fingerprint.svg";
 import jerseyIcon from "@/assets/icons/jersey.svg";
 import lineChartsIcon from "@/assets/icons/line-charts.svg";
+import matchupsIcon from "@/assets/icons/matchups.svg";
+import powerRankIcon from "@/assets/icons/power-rank.svg";
+import liveScoringIcon from "@/assets/icons/live-scoring.svg";
 import { useState, type ComponentType } from "react";
 
 type NavItem = {
@@ -17,12 +20,12 @@ type NavItem = {
 const navItems: NavItem[] = [
   { label: "Dashboard", lucideIcon: BarChart3 },
   { label: "Standings", lucideIcon: Trophy },
-  { label: "Matchups", lucideIcon: Swords },
+  { label: "Matchups", svgSrc: matchupsIcon },
   { label: "Rosters", svgSrc: jerseyIcon },
   { label: "Add/Drop", lucideIcon: ArrowRightLeft },
-  { label: "Power Rank", svgSrc: lineChartsIcon },
-  { label: "Draft Results", lucideIcon: FileText },
-  { label: "Player Stats", lucideIcon: Newspaper },
+  { label: "Power Rank", svgSrc: powerRankIcon },
+  { label: "Live Scoring", svgSrc: liveScoringIcon },
+  { label: "Player Stats", svgSrc: lineChartsIcon },
   { label: "Login", svgSrc: fingerprintIcon },
 ];
 
