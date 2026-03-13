@@ -3,6 +3,7 @@ import {
   FileText, Settings, ChevronDown, Zap, ListOrdered, Newspaper
 } from "lucide-react";
 import { NFLShield } from "./icons/NFLShield";
+import rivalriesLogo from "@/assets/rivalries-brand.svg";
 import { useState } from "react";
 
 const navItems = [
