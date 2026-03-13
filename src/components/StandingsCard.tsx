@@ -52,7 +52,7 @@ export default function StandingsCard() {
         ))}
       </div>
 
-      <div className="overflow-x-auto">
+      <div className="overflow-x-auto -mx-px">
         <table className="w-full text-sm">
           <thead>
             <tr className="text-xs uppercase tracking-wider text-muted-foreground">
