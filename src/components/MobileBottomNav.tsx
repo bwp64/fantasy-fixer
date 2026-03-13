@@ -1,18 +1,17 @@
 import homeIcon from "@/assets/icons/home.svg";
+import standingsIcon from "@/assets/icons/standings.svg";
 import matchupsIcon from "@/assets/icons/matchups-2.svg";
 import calendarIcon from "@/assets/icons/calendar.svg";
 import jerseyIcon from "@/assets/icons/jersey-2.svg";
-import { Trophy } from "lucide-react";
 
 type Tab = {
   label: string;
-  svgSrc?: string;
-  lucideIcon?: React.ReactNode;
+  svgSrc: string;
 };
 
 const tabs: Tab[] = [
   { label: "Home", svgSrc: homeIcon },
-  { label: "Standings", lucideIcon: <Trophy className="w-5 h-5" /> },
+  { label: "Standings", svgSrc: standingsIcon },
   { label: "Matchups", svgSrc: matchupsIcon },
   { label: "Schedule", svgSrc: calendarIcon },
   { label: "Rosters", svgSrc: jerseyIcon },
