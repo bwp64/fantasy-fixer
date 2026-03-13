@@ -3,7 +3,8 @@ import QuickStatsBar from "@/components/QuickStatsBar";
 import StandingsCard from "@/components/StandingsCard";
 import MatchupsCard from "@/components/MatchupsCard";
 import TopPerformersCard from "@/components/TopPerformersCard";
-import RecentActivityCard from "@/components/RecentActivityCard";
+import NewsCard from "@/components/NewsCard";
+import TransactionsCard from "@/components/TransactionsCard";
 
 const Index = () => {
   return (
@@ -13,10 +14,10 @@ const Index = () => {
         {/* Header */}
         <div className="mb-8">
           <h1 className="text-3xl font-heading font-bold uppercase tracking-wide text-foreground">
-            League Dashboard
+            Copy of NFL 24
           </h1>
           <p className="text-sm text-muted-foreground mt-1">
-            Welcome back, Brent. Your team is looking strong this week.
+            2026 Season · Preseason · Defending Champions: Chiefs
           </p>
         </div>
 
@@ -27,10 +28,11 @@ const Index = () => {
 
         {/* Main Grid */}
         <div className="grid grid-cols-1 xl:grid-cols-2 gap-6">
+          <StandingsCard />
           <MatchupsCard />
           <TopPerformersCard />
-          <StandingsCard />
-          <RecentActivityCard />
+          <NewsCard />
+          <TransactionsCard />
         </div>
       </main>
     </div>

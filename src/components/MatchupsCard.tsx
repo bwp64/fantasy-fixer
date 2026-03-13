@@ -1,10 +1,12 @@
-import { Zap } from "lucide-react";
+import { Clock } from "lucide-react";
 
 const matchups = [
-  { home: "Thunder Hawks", homeScore: 142.8, away: "Gridiron Kings", awayScore: 128.4, live: true },
-  { home: "Steel Curtain", homeScore: 98.2, away: "Blitz Brigade", awayScore: 112.5, live: true },
-  { home: "Red Zone Rebels", homeScore: 105.6, away: "Endzone Empire", awayScore: 89.3, live: false },
-  { home: "Pigskin Posse", homeScore: 76.1, away: "Fourth & Long", awayScore: 82.9, live: false },
+  { home: "Chiefs", homeAbbr: "KC", away: "Saints", awayAbbr: "NO" },
+  { home: "Bengals", homeAbbr: "CIN", away: "49ers", awayAbbr: "SF" },
+  { home: "Dolphins", homeAbbr: "MIA", away: "Lions", awayAbbr: "DET" },
+  { home: "Colts", homeAbbr: "IND", away: "Cardinals", awayAbbr: "AZ" },
+  { home: "Ravens", homeAbbr: "BAL", away: "Vikings", awayAbbr: "MIN" },
+  { home: "Texans", homeAbbr: "HOU", away: "Eagles", awayAbbr: "PHI" },
 ];
 
 export default function MatchupsCard() {
@@ -12,50 +14,40 @@ export default function MatchupsCard() {
     <div className="bg-card rounded-lg border border-border">
       <div className="px-5 py-4 border-b border-border flex items-center justify-between">
         <h3 className="font-heading text-lg font-semibold uppercase tracking-wide text-card-foreground">
-          Live Matchups
+          Matchups
         </h3>
-        <div className="flex items-center gap-1.5 text-xs font-medium text-success">
-          <Zap className="w-3.5 h-3.5" />
-          Week 12
+        <div className="flex items-center gap-1.5 text-xs font-medium text-muted-foreground">
+          <Clock className="w-3.5 h-3.5" />
+          Preseason
         </div>
       </div>
       <div className="divide-y divide-border">
-        {matchups.map((m, i) => {
-          const homeWinning = m.homeScore > m.awayScore;
-          return (
-            <div key={i} className="px-5 py-4 hover:bg-muted/50 transition-colors duration-75">
-              <div className="flex items-center justify-between">
-                <div className="flex-1 min-w-0">
-                  <span className={`text-sm font-semibold ${homeWinning ? "text-card-foreground" : "text-muted-foreground"}`}>
-                    {m.home}
-                  </span>
-                </div>
-                <div className="flex items-center gap-3 mx-4">
-                  <span className={`text-lg font-heading font-bold tabular-nums ${homeWinning ? "text-card-foreground" : "text-muted-foreground"}`}>
-                    {m.homeScore.toFixed(1)}
-                  </span>
-                  <span className="text-xs text-muted-foreground">vs</span>
-                  <span className={`text-lg font-heading font-bold tabular-nums ${!homeWinning ? "text-card-foreground" : "text-muted-foreground"}`}>
-                    {m.awayScore.toFixed(1)}
-                  </span>
-                </div>
-                <div className="flex-1 min-w-0 text-right">
-                  <span className={`text-sm font-semibold ${!homeWinning ? "text-card-foreground" : "text-muted-foreground"}`}>
-                    {m.away}
-                  </span>
-                </div>
+        {matchups.map((m, i) => (
+          <div key={i} className="px-5 py-4 hover:bg-muted/50 transition-colors duration-75">
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-2.5 flex-1 min-w-0">
+                <span className="w-8 h-8 rounded-md bg-primary flex items-center justify-center text-primary-foreground text-xs font-bold font-heading shrink-0">
+                  {m.homeAbbr}
+                </span>
+                <span className="text-sm font-semibold text-card-foreground">{m.home}</span>
               </div>
-              {m.live && (
-                <div className="mt-2 flex justify-center">
-                  <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-success/10 text-success text-xs font-medium">
-                    <span className="w-1.5 h-1.5 rounded-full bg-success animate-pulse" />
-                    Live
-                  </span>
-                </div>
-              )}
+              <div className="flex items-center gap-3 mx-4">
+                <span className="text-lg font-heading font-bold tabular-nums text-muted-foreground">0</span>
+                <span className="text-xs text-muted-foreground font-medium">vs</span>
+                <span className="text-lg font-heading font-bold tabular-nums text-muted-foreground">0</span>
+              </div>
+              <div className="flex items-center gap-2.5 flex-1 min-w-0 justify-end">
+                <span className="text-sm font-semibold text-card-foreground">{m.away}</span>
+                <span className="w-8 h-8 rounded-md bg-primary flex items-center justify-center text-primary-foreground text-xs font-bold font-heading shrink-0">
+                  {m.awayAbbr}
+                </span>
+              </div>
             </div>
-          );
-        })}
+            <div className="mt-2 flex justify-center">
+              <span className="text-xs text-muted-foreground">Season not started</span>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );

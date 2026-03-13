@@ -1,10 +1,10 @@
-import { Trophy, TrendingUp, Users, Calendar } from "lucide-react";
+import { Trophy, Users, Calendar, Shield } from "lucide-react";
 
 const stats = [
-  { label: "Record", value: "10-2", icon: Trophy, accent: "text-success" },
-  { label: "Points For", value: "1,842.5", icon: TrendingUp, accent: "text-accent" },
-  { label: "League Rank", value: "#1", icon: Users, accent: "text-accent" },
-  { label: "Next Matchup", value: "vs Kings", icon: Calendar, accent: "text-card-foreground" },
+  { label: "Teams", value: "12", icon: Users, accent: "text-accent" },
+  { label: "Divisions", value: "2", icon: Shield, accent: "text-card-foreground" },
+  { label: "Season", value: "2026", icon: Calendar, accent: "text-card-foreground" },
+  { label: "Defending Champ", value: "Chiefs", icon: Trophy, accent: "text-success" },
 ];
 
 export default function QuickStatsBar() {
