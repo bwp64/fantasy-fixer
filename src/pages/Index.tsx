@@ -34,6 +34,7 @@ const Index = () => {
           <TopPerformersCard />
           <NewsCard />
           <TransactionsCard />
+          <XFeedCard />
         </div>
       </main>
     </div>
