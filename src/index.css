@@ -114,3 +114,10 @@
     font-family: var(--font-body);
   }
 }
+
+@layer components {
+  .card-glow {
+    border: 1px solid hsl(var(--card-border));
+    box-shadow: 0 0 12px 0 hsl(var(--card-glow) / 0.15);
+  }
+}
