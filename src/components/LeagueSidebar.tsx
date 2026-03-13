@@ -36,12 +36,13 @@ export default function LeagueSidebar() {
 
   return (
     <aside className="w-64 min-h-screen bg-sidebar flex flex-col shrink-0">
-      {/* League Header */}
-      <div className="p-5 border-b border-sidebar-border">
-        <div className="flex items-center gap-3">
-          <img src={rivalriesLogo} alt="Rivalries" className="h-8 shrink-0" />
-        </div>
+      {/* Brand Logo */}
+      <div className="px-5 pt-5 pb-3">
+        <img src={rivalriesLogo} alt="Rivalries" className="h-8 shrink-0" />
       </div>
+
+      {/* Gap / Divider */}
+      <div className="mx-4 border-t border-sidebar-border mb-2" />
 
       {/* Navigation */}
       <nav className="flex-1 p-3 space-y-1">
