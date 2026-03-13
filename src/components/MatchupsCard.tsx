@@ -23,22 +23,22 @@ export default function MatchupsCard() {
       </div>
       <div className="divide-y divide-border">
         {matchups.map((m, i) => (
-          <div key={i} className="px-5 py-4 hover:bg-muted/50 transition-colors duration-75">
+          <div key={i} className="px-3 md:px-5 py-3 md:py-4 hover:bg-muted/50 active:bg-muted/50 transition-colors duration-75">
             <div className="flex items-center justify-between">
-              <div className="flex items-center gap-2.5 flex-1 min-w-0">
-                <span className="w-8 h-8 rounded-md bg-primary flex items-center justify-center text-primary-foreground text-xs font-bold font-heading shrink-0">
+              <div className="flex items-center gap-2 flex-1 min-w-0">
+                <span className="w-7 h-7 md:w-8 md:h-8 rounded-md bg-primary flex items-center justify-center text-primary-foreground text-[10px] md:text-xs font-bold font-heading shrink-0">
                   {m.homeAbbr}
                 </span>
-                <span className="text-sm font-semibold text-card-foreground">{m.home}</span>
+                <span className="text-xs md:text-sm font-semibold text-card-foreground truncate">{m.home}</span>
               </div>
-              <div className="flex items-center gap-3 mx-4">
-                <span className="text-lg font-heading font-bold tabular-nums text-muted-foreground">0</span>
-                <span className="text-xs text-muted-foreground font-medium">vs</span>
-                <span className="text-lg font-heading font-bold tabular-nums text-muted-foreground">0</span>
+              <div className="flex items-center gap-2 md:gap-3 mx-2 md:mx-4">
+                <span className="text-base md:text-lg font-heading font-bold tabular-nums text-muted-foreground">0</span>
+                <span className="text-[10px] md:text-xs text-muted-foreground font-medium">vs</span>
+                <span className="text-base md:text-lg font-heading font-bold tabular-nums text-muted-foreground">0</span>
               </div>
-              <div className="flex items-center gap-2.5 flex-1 min-w-0 justify-end">
-                <span className="text-sm font-semibold text-card-foreground">{m.away}</span>
-                <span className="w-8 h-8 rounded-md bg-primary flex items-center justify-center text-primary-foreground text-xs font-bold font-heading shrink-0">
+              <div className="flex items-center gap-2 flex-1 min-w-0 justify-end">
+                <span className="text-xs md:text-sm font-semibold text-card-foreground truncate">{m.away}</span>
+                <span className="w-7 h-7 md:w-8 md:h-8 rounded-md bg-primary flex items-center justify-center text-primary-foreground text-[10px] md:text-xs font-bold font-heading shrink-0">
                   {m.awayAbbr}
                 </span>
               </div>

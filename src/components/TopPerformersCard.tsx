@@ -141,7 +141,7 @@ export default function TopPerformersCard() {
             data-player-id={p.playerId}
             data-pos={p.pos}
             data-team={p.team}
-            className="flex items-center px-5 py-2.5 hover:bg-muted/50 transition-colors duration-75 animate-fade-in group"
+            className="flex items-center px-3 md:px-5 py-2.5 hover:bg-muted/50 active:bg-muted/50 transition-colors duration-75 animate-fade-in group"
             style={{ animationDelay: `${i * 30}ms`, animationFillMode: "both" }}
           >
             {/* Rank */}
