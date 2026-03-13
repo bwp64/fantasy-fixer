@@ -94,3 +94,15 @@
     font-family: var(--font-body);
   }
 }
+
+@keyframes jitter {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  20% { transform: translate(-1px, 1px) rotate(-2deg); }
+  40% { transform: translate(1px, -1px) rotate(2deg); }
+  60% { transform: translate(-1px, 0px) rotate(-1deg); }
+  80% { transform: translate(1px, 1px) rotate(1deg); }
+}
+
+.icon-jitter:hover {
+  animation: jitter 0.25s ease-in-out;
+}
