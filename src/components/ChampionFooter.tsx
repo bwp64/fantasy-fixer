@@ -2,7 +2,7 @@ import { Trophy } from "lucide-react";
 
 export default function ChampionFooter() {
   return (
-    <footer className="bg-card border-t border-border py-6">
+    <footer className="bg-card border-t border-border card-glow py-6 mt-6 mx-6 lg:mx-8 mb-6 rounded-lg">
       <div className="flex flex-col items-center gap-3">
         <div className="flex items-center gap-2 text-muted-foreground">
           <Trophy className="w-4 h-4 text-accent" />

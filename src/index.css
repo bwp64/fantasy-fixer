@@ -13,23 +13,26 @@
 
 @layer base {
   :root {
-    --background: 210 20% 98%;
-    --foreground: 215 25% 17%;
+    --background: 0 0% 15%;
+    --foreground: 210 20% 90%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 215 25% 17%;
+    --card: 0 0% 21%;
+    --card-foreground: 210 20% 90%;
+    --card-border: 0 0% 29%;
+    --card-glow: 0 0% 40%;
+    --card-foreground: 210 20% 90%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 215 25% 17%;
+    --popover: 0 0% 21%;
+    --popover-foreground: 210 20% 90%;
 
-    --primary: 222 47% 11%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 210 20% 90%;
+    --primary-foreground: 0 0% 15%;
 
-    --secondary: 210 20% 96%;
-    --secondary-foreground: 222 47% 11%;
+    --secondary: 0 0% 25%;
+    --secondary-foreground: 210 20% 90%;
 
-    --muted: 215 16% 93%;
-    --muted-foreground: 215 16% 47%;
+    --muted: 0 0% 25%;
+    --muted-foreground: 0 0% 55%;
 
     --accent: 217 91% 60%;
     --accent-foreground: 0 0% 100%;
@@ -40,8 +43,8 @@
     --success: 160 60% 45%;
     --success-foreground: 0 0% 100%;
 
-    --border: 214 20% 90%;
-    --input: 214 20% 90%;
+    --border: 0 0% 29%;
+    --input: 0 0% 29%;
     --ring: 217 91% 60%;
 
     --radius: 0.5rem;
@@ -109,5 +112,12 @@
   }
   .font-body {
     font-family: var(--font-body);
+  }
+}
+
+@layer components {
+  .card-glow {
+    border: 1px solid hsl(var(--card-border));
+    box-shadow: 0 0 12px 0 hsl(var(--card-glow) / 0.15);
   }
 }
