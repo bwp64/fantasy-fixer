@@ -1,11 +1,18 @@
-@import url('@fontsource/oswald/400.css');
-@import url('@fontsource/oswald/500.css');
-@import url('@fontsource/oswald/600.css');
-@import url('@fontsource/oswald/700.css');
-@import url('@fontsource/inter/400.css');
-@import url('@fontsource/inter/500.css');
-@import url('@fontsource/inter/600.css');
-@import url('@fontsource/inter/700.css');
+@font-face {
+  font-family: 'SF Compact Display';
+  src: url('/fonts/SF-Compact-Display-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SF Compact Text';
+  src: url('/fonts/SF-Compact-Text-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 
 @tailwind base;
 @tailwind components;
@@ -14,10 +21,10 @@
 @layer base {
   :root {
     --background: 0 0% 15%;
-    --foreground: 210 20% 90%;
+    --foreground: 0 0% 97%;
 
     --card: 0 0% 21%;
-    --card-foreground: 210 20% 90%;
+    --card-foreground: 0 0% 97%;
     --card-border: 0 0% 29%;
     --card-glow: 0 0% 40%;
     --card-foreground: 210 20% 90%;
@@ -59,8 +66,8 @@
     --sidebar-ring: 217 91% 60%;
     --sidebar-muted: 215 16% 47%;
 
-    --font-heading: 'Oswald', sans-serif;
-    --font-body: 'Inter', sans-serif;
+    --font-heading: 'SF Compact Display', sans-serif;
+    --font-body: 'SF Compact Text', sans-serif;
   }
 
   .dark {

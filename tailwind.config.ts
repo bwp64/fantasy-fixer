@@ -14,8 +14,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        heading: ["Oswald", "sans-serif"],
-        body: ["Inter", "sans-serif"],
+        heading: ["SF Compact Display", "sans-serif"],
+        body: ["SF Compact Text", "sans-serif"],
       },
       colors: {
         border: "hsl(var(--border))",
