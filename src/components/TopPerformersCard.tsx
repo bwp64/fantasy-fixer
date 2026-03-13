@@ -83,6 +83,21 @@ const posColorMap: Record<string, string> = {
   TE: "bg-pos-te text-accent-foreground",
 };
 
+const posBorderMap: Record<string, string> = {
+  QB: "ring-pos-qb",
+  RB: "ring-pos-rb",
+  WR: "ring-pos-wr",
+  TE: "ring-pos-te",
+};
+
+function playerImgUrl(id: string) {
+  return `https://www.mflscripts.com/playerImages_96x96/mfl_${id}.png`;
+}
+
+function teamLogoUrl(team: string) {
+  return `https://www.mflscripts.com/ImageDirectory/script-images/nflTeamsvg_2/${team}.svg`;
+}
+
 export default function TopPerformersCard() {
   const [activeTab, setActiveTab] = useState<Position>("MVP");
 
@@ -121,9 +136,20 @@ export default function TopPerformersCard() {
           >
             <span className="w-5 text-xs font-heading font-bold text-muted-foreground tabular-nums">{p.rank}</span>
 
-            <span className={`w-7 h-5 rounded text-[9px] font-bold flex items-center justify-center mx-2.5 shrink-0 ${posColorMap[p.pos] || "bg-secondary text-muted-foreground"}`}>
-              {p.pos}
-            </span>
+            <div className="relative w-10 h-10 shrink-0 mx-2.5">
+              <img
+                src={playerImgUrl(p.playerId)}
+                alt=""
+                className={`w-10 h-10 rounded-full object-cover ring-2 ${posBorderMap[p.pos] || "ring-border"} bg-secondary`}
+                loading="lazy"
+              />
+              <img
+                src={teamLogoUrl(p.team)}
+                alt=""
+                className="absolute -bottom-0.5 -right-0.5 w-4.5 h-4.5 rounded-full bg-card"
+                loading="lazy"
+              />
+            </div>
 
             <div className="flex-1 min-w-0">
               <span className="text-sm font-medium text-card-foreground group-hover:text-accent transition-colors">
