@@ -3,6 +3,7 @@ import {
   FileText, Settings, ChevronDown, Zap, ListOrdered, Newspaper
 } from "lucide-react";
 import { NFLShield } from "./icons/NFLShield";
+import rivalriesLogo from "@/assets/rivalries-brand.svg";
 import { useState } from "react";
 
 const navItems = [
@@ -25,13 +26,7 @@ export default function LeagueSidebar() {
       {/* League Header */}
       <div className="p-5 border-b border-sidebar-border">
         <div className="flex items-center gap-3">
-          <NFLShield className="w-10 h-10 shrink-0" />
-          <div className="min-w-0">
-            <h2 className="font-heading text-sm font-semibold text-sidebar-foreground uppercase tracking-wide truncate">
-              Copy of NFL 24
-            </h2>
-            <p className="text-xs text-sidebar-muted">2026 Season · 12 Teams</p>
-          </div>
+          <img src={rivalriesLogo} alt="Rivalries" className="h-8 shrink-0" />
         </div>
       </div>
 
