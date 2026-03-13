@@ -1,17 +1,21 @@
-import { BarChart3, Trophy, CalendarDays, Users, Zap } from "lucide-react";
-import matchupsIcon from "@/assets/icons/matchups.svg";
+import homeIcon from "@/assets/icons/home.svg";
+import matchupsIcon from "@/assets/icons/matchups-2.svg";
+import calendarIcon from "@/assets/icons/calendar.svg";
+import jerseyIcon from "@/assets/icons/jersey-2.svg";
+import { Trophy } from "lucide-react";
 
 type Tab = {
   label: string;
-  icon: React.ReactNode;
+  svgSrc?: string;
+  lucideIcon?: React.ReactNode;
 };
 
 const tabs: Tab[] = [
-  { label: "Home", icon: <BarChart3 className="w-5 h-5" /> },
-  { label: "Standings", icon: <Trophy className="w-5 h-5" /> },
-  { label: "Matchups", icon: <Zap className="w-5 h-5" /> },
-  { label: "Schedule", icon: <CalendarDays className="w-5 h-5" /> },
-  { label: "Rosters", icon: <Users className="w-5 h-5" /> },
+  { label: "Home", svgSrc: homeIcon },
+  { label: "Standings", lucideIcon: <Trophy className="w-5 h-5" /> },
+  { label: "Matchups", svgSrc: matchupsIcon },
+  { label: "Schedule", svgSrc: calendarIcon },
+  { label: "Rosters", svgSrc: jerseyIcon },
 ];
 
 export default function MobileBottomNav({
@@ -36,7 +40,20 @@ export default function MobileBottomNav({
                   : "text-sidebar-muted"
               }`}
             >
-              {tab.icon}
+              {tab.svgSrc ? (
+                <img
+                  src={tab.svgSrc}
+                  alt=""
+                  className="w-5 h-5"
+                  style={{
+                    filter: isActive
+                      ? "brightness(0) invert(0.75) sepia(1) saturate(3) hue-rotate(180deg)"
+                      : "brightness(0) invert(0.55)",
+                  }}
+                />
+              ) : (
+                tab.lucideIcon
+              )}
               <span className="text-[9px] font-heading font-bold uppercase tracking-wider">
                 {tab.label}
               </span>
