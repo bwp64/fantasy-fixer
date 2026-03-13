@@ -1,52 +1,88 @@
-const teams = [
-  { rank: 1, name: "Thunder Hawks", owner: "Brent P.", wins: 10, losses: 2, pf: 1842.5, pa: 1456.2 },
-  { rank: 2, name: "Gridiron Kings", owner: "Mike R.", wins: 9, losses: 3, pf: 1798.3, pa: 1502.1 },
-  { rank: 3, name: "Steel Curtain", owner: "Jake L.", wins: 8, losses: 4, pf: 1756.8, pa: 1589.4 },
-  { rank: 4, name: "Blitz Brigade", owner: "Sarah K.", wins: 7, losses: 5, pf: 1701.2, pa: 1634.7 },
-  { rank: 5, name: "Red Zone Rebels", owner: "Chris D.", wins: 6, losses: 6, pf: 1654.9, pa: 1678.3 },
-  { rank: 6, name: "Endzone Empire", owner: "Alex T.", wins: 5, losses: 7, pf: 1598.4, pa: 1712.5 },
-  { rank: 7, name: "Pigskin Posse", owner: "Dan W.", wins: 4, losses: 8, pf: 1523.7, pa: 1745.6 },
-  { rank: 8, name: "Fourth & Long", owner: "Lisa M.", wins: 2, losses: 10, pf: 1402.1, pa: 1801.9 },
-];
+import { useState } from "react";
+
+type Division = "American" | "National";
+
+const divisions: Record<Division, Array<{ name: string; abbr: string; record: string; pct: string; avgPF: string; avgPA: string; pwr: number; bbidSpent: string; bbidBal: string }>> = {
+  American: [
+    { name: "Chiefs", abbr: "KC", record: "0-0-0", pct: ".000", avgPF: ".0", avgPA: ".0", pwr: 0, bbidSpent: "$0.00", bbidBal: "$0.00" },
+    { name: "Bengals", abbr: "CIN", record: "0-0-0", pct: ".000", avgPF: ".0", avgPA: ".0", pwr: 0, bbidSpent: "$0.00", bbidBal: "$0.00" },
+    { name: "Dolphins", abbr: "MIA", record: "0-0-0", pct: ".000", avgPF: ".0", avgPA: ".0", pwr: 0, bbidSpent: "$0.00", bbidBal: "$0.00" },
+    { name: "Colts", abbr: "IND", record: "0-0-0", pct: ".000", avgPF: ".0", avgPA: ".0", pwr: 0, bbidSpent: "$0.00", bbidBal: "$0.00" },
+    { name: "Ravens", abbr: "BAL", record: "0-0-0", pct: ".000", avgPF: ".0", avgPA: ".0", pwr: 0, bbidSpent: "$0.00", bbidBal: "$0.00" },
+    { name: "Texans", abbr: "HOU", record: "0-0-0", pct: ".000", avgPF: ".0", avgPA: ".0", pwr: 0, bbidSpent: "$0.00", bbidBal: "$0.00" },
+  ],
+  National: [
+    { name: "Saints", abbr: "NO", record: "0-0-0", pct: ".000", avgPF: ".0", avgPA: ".0", pwr: 0, bbidSpent: "$0.00", bbidBal: "$0.00" },
+    { name: "49ers", abbr: "SF", record: "0-0-0", pct: ".000", avgPF: ".0", avgPA: ".0", pwr: 0, bbidSpent: "$0.00", bbidBal: "$0.00" },
+    { name: "Lions", abbr: "DET", record: "0-0-0", pct: ".000", avgPF: ".0", avgPA: ".0", pwr: 0, bbidSpent: "$0.00", bbidBal: "$0.00" },
+    { name: "Cardinals", abbr: "AZ", record: "0-0-0", pct: ".000", avgPF: ".0", avgPA: ".0", pwr: 0, bbidSpent: "$0.00", bbidBal: "$0.00" },
+    { name: "Vikings", abbr: "MIN", record: "0-0-0", pct: ".000", avgPF: ".0", avgPA: ".0", pwr: 0, bbidSpent: "$0.00", bbidBal: "$0.00" },
+    { name: "Eagles", abbr: "PHI", record: "0-0-0", pct: ".000", avgPF: ".0", avgPA: ".0", pwr: 0, bbidSpent: "$0.00", bbidBal: "$0.00" },
+  ],
+};
+
+const divisionTabs: Division[] = ["American", "National"];
 
 export default function StandingsCard() {
+  const [activeDivision, setActiveDivision] = useState<Division>("American");
+
   return (
     <div className="bg-card rounded-lg border border-border">
       <div className="px-5 py-4 border-b border-border flex items-center justify-between">
         <h3 className="font-heading text-lg font-semibold uppercase tracking-wide text-card-foreground">
           Standings
         </h3>
-        <span className="text-xs font-medium text-muted-foreground">Week 12</span>
+        <span className="text-xs font-medium text-muted-foreground">Preseason</span>
       </div>
+
+      {/* Division Tabs */}
+      <div className="flex border-b border-border">
+        {divisionTabs.map((div) => (
+          <button
+            key={div}
+            onClick={() => setActiveDivision(div)}
+            className={`flex-1 px-4 py-2.5 text-xs font-heading font-semibold uppercase tracking-wider transition-colors duration-75 ${
+              activeDivision === div
+                ? "text-accent border-b-2 border-accent"
+                : "text-muted-foreground hover:text-card-foreground"
+            }`}
+          >
+            {div}
+          </button>
+        ))}
+      </div>
+
       <div className="overflow-x-auto">
         <table className="w-full text-sm">
           <thead>
             <tr className="text-xs uppercase tracking-wider text-muted-foreground">
-              <th className="text-left px-5 py-3 font-medium">#</th>
               <th className="text-left px-5 py-3 font-medium">Team</th>
-              <th className="text-right px-5 py-3 font-medium">W</th>
-              <th className="text-right px-5 py-3 font-medium">L</th>
-              <th className="text-right px-5 py-3 font-medium">PF</th>
-              <th className="text-right px-5 py-3 font-medium">PA</th>
+              <th className="text-right px-3 py-3 font-medium">W-L-T</th>
+              <th className="text-right px-3 py-3 font-medium">%</th>
+              <th className="text-right px-3 py-3 font-medium">Avg PF</th>
+              <th className="text-right px-3 py-3 font-medium">Avg PA</th>
+              <th className="text-right px-5 py-3 font-medium">PWR</th>
             </tr>
           </thead>
           <tbody>
-            {teams.map((team) => (
+            {divisions[activeDivision].map((team) => (
               <tr
-                key={team.rank}
+                key={team.abbr}
                 className="border-t border-border hover:bg-muted/50 transition-colors duration-75"
               >
-                <td className="px-5 py-3 font-medium text-muted-foreground">{team.rank}</td>
                 <td className="px-5 py-3">
-                  <div>
+                  <div className="flex items-center gap-2.5">
+                    <span className="w-8 h-8 rounded-md bg-primary flex items-center justify-center text-primary-foreground text-xs font-bold font-heading shrink-0">
+                      {team.abbr}
+                    </span>
                     <span className="font-semibold text-card-foreground">{team.name}</span>
-                    <span className="block text-xs text-muted-foreground">{team.owner}</span>
                   </div>
                 </td>
-                <td className="text-right px-5 py-3 font-semibold text-success">{team.wins}</td>
-                <td className="text-right px-5 py-3 font-semibold text-destructive">{team.losses}</td>
-                <td className="text-right px-5 py-3 font-mono text-card-foreground">{team.pf.toFixed(1)}</td>
-                <td className="text-right px-5 py-3 font-mono text-muted-foreground">{team.pa.toFixed(1)}</td>
+                <td className="text-right px-3 py-3 font-mono text-card-foreground">{team.record}</td>
+                <td className="text-right px-3 py-3 font-mono text-muted-foreground">{team.pct}</td>
+                <td className="text-right px-3 py-3 font-mono text-card-foreground">{team.avgPF}</td>
+                <td className="text-right px-3 py-3 font-mono text-muted-foreground">{team.avgPA}</td>
+                <td className="text-right px-5 py-3 font-mono text-muted-foreground">{team.pwr}</td>
               </tr>
             ))}
           </tbody>
