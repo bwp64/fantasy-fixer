@@ -1,6 +1,6 @@
 import { 
   Trophy, ArrowRightLeft, BarChart3, 
-  FileText, Settings, ChevronDown
+  ChevronDown
 } from "lucide-react";
 import rivalriesLogo from "@/assets/rivalries-brand.svg";
 import fingerprintIcon from "@/assets/icons/fingerprint.svg";
@@ -9,6 +9,7 @@ import lineChartsIcon from "@/assets/icons/line-charts.svg";
 import matchupsIcon from "@/assets/icons/matchups.svg";
 import powerRankIcon from "@/assets/icons/power-rank.svg";
 import liveScoringIcon from "@/assets/icons/live-scoring.svg";
+import banknoteIcon from "@/assets/icons/banknote.svg";
 import { useState, type ComponentType } from "react";
 
 type NavItem = {
@@ -22,7 +23,7 @@ const navItems: NavItem[] = [
   { label: "Standings", lucideIcon: Trophy },
   { label: "Matchups", svgSrc: matchupsIcon },
   { label: "Rosters", svgSrc: jerseyIcon },
-  { label: "Add/Drop", lucideIcon: ArrowRightLeft },
+  { label: "Transactions", svgSrc: banknoteIcon },
   { label: "Power Rank", svgSrc: powerRankIcon },
   { label: "Live Scoring", svgSrc: liveScoringIcon },
   { label: "Player Stats", svgSrc: lineChartsIcon },
@@ -31,6 +32,7 @@ const navItems: NavItem[] = [
 
 export default function LeagueSidebar() {
   const [active, setActive] = useState("Dashboard");
+  const [hoveredItem, setHoveredItem] = useState<string | null>(null);
 
   return (
     <aside className="w-64 min-h-screen bg-sidebar flex flex-col shrink-0">
@@ -45,10 +47,13 @@ export default function LeagueSidebar() {
       <nav className="flex-1 p-3 space-y-1">
         {navItems.map((item) => {
           const isActive = active === item.label;
+          const isHovered = hoveredItem === item.label;
           return (
             <button
               key={item.label}
               onClick={() => setActive(item.label)}
+              onMouseEnter={() => setHoveredItem(item.label)}
+              onMouseLeave={() => setHoveredItem(null)}
               className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-md text-sm font-medium transition-colors duration-100 ${
                 isActive
                   ? "bg-sidebar-accent text-sidebar-primary"
@@ -59,11 +64,11 @@ export default function LeagueSidebar() {
                 <img
                   src={item.svgSrc}
                   alt=""
-                  className="w-[18px] h-[18px] shrink-0 opacity-70"
+                  className={`w-[18px] h-[18px] shrink-0 opacity-70 ${isHovered ? "animate-jitter" : ""}`}
                   style={{ filter: "brightness(0) invert(0.6)" }}
                 />
               ) : item.lucideIcon ? (
-                <item.lucideIcon className="w-[18px] h-[18px] shrink-0" />
+                <item.lucideIcon className={`w-[18px] h-[18px] shrink-0 ${isHovered ? "animate-jitter" : ""}`} />
               ) : null}
               {item.label}
             </button>
