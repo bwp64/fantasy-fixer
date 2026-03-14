@@ -133,11 +133,15 @@ export default function TopPerformersCard() {
           >
             <span className="w-7 text-sm font-heading font-bold text-muted-foreground tabular-nums text-right mr-2">{p.rank}.</span>
 
-            <div className="relative w-10 h-10 shrink-0 mr-3">
+            <div className="relative shrink-0 mr-3" style={{ width: 49, height: 49 }}>
               <img
                 src={playerImgUrl(p.playerId)}
-                alt=""
-                className={`w-10 h-10 rounded-full object-cover ring-2 ${posBorderMap[p.pos] || "ring-border"} bg-secondary`}
+                alt={`${p.lastName} ${p.firstName}`}
+                width={96}
+                height={96}
+                decoding="async"
+                className={`rounded-full object-cover border-2 bg-secondary ${posBorderMap[p.pos] || "border-border"}`}
+                style={{ width: 45, height: 45 }}
                 loading="lazy"
               />
             </div>
