@@ -131,9 +131,9 @@ export default function TopPerformersCard() {
             rel="noopener noreferrer"
             className="flex items-center px-4 py-2.5 hover:bg-secondary/50 transition-colors group"
           >
-            <span className="w-5 text-xs font-heading font-bold text-muted-foreground tabular-nums">{p.rank}</span>
+            <span className="w-7 text-sm font-heading font-bold text-muted-foreground tabular-nums text-right mr-2">{p.rank}.</span>
 
-            <div className="relative w-10 h-10 shrink-0 mx-2.5">
+            <div className="relative w-10 h-10 shrink-0 mr-3">
               <img
                 src={playerImgUrl(p.playerId)}
                 alt=""
@@ -143,15 +143,20 @@ export default function TopPerformersCard() {
             </div>
 
             <div className="flex-1 min-w-0">
-              <span className="text-sm font-medium text-card-foreground group-hover:text-accent transition-colors">
-                {p.firstName} {p.lastName}
+              <span className="block text-sm font-heading font-bold uppercase tracking-wide text-card-foreground group-hover:text-accent transition-colors leading-tight">
+                {p.lastName}
               </span>
-              <div className="text-[11px] text-muted-foreground">
-                {p.pos} · {p.team}
-              </div>
+              <span className="block text-[11px] text-muted-foreground uppercase tracking-wide leading-tight">
+                {p.firstName}
+              </span>
             </div>
 
-            <span className="text-sm font-heading font-bold tabular-nums text-card-foreground w-14 text-right">
+            <div className="text-right mr-4">
+              <span className="block text-xs font-heading font-bold uppercase text-accent">{p.pos}</span>
+              <span className="block text-[11px] text-muted-foreground">{p.team}</span>
+            </div>
+
+            <span className="text-sm font-heading font-bold tabular-nums text-card-foreground w-12 text-right">
               {p.pts.toFixed(1)}
             </span>
           </a>
