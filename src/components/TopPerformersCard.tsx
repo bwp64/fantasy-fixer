@@ -84,10 +84,10 @@ const posColorMap: Record<string, string> = {
 };
 
 const posBorderMap: Record<string, string> = {
-  QB: "ring-pos-qb",
-  RB: "ring-pos-rb",
-  WR: "ring-pos-wr",
-  TE: "ring-pos-te",
+  QB: "border-pos-qb",
+  RB: "border-pos-rb",
+  WR: "border-pos-wr",
+  TE: "border-pos-te",
 };
 
 function playerImgUrl(id: string) {
