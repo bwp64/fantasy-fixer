@@ -69,7 +69,7 @@ export default function SchedulePage() {
       </div>
 
       {viewMode === "grid" ? (
-        <div className="bg-card rounded-lg border border-border overflow-x-auto">
+        <div className="bg-card rounded-lg border border-border card-glow overflow-x-auto">
           <table className="w-full text-xs">
             <thead>
               <tr className="text-[10px] uppercase tracking-wider text-muted-foreground">
