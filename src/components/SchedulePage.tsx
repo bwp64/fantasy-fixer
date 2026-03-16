@@ -83,7 +83,7 @@ export default function SchedulePage() {
             </thead>
             <tbody>
               {teams.map((team) => (
-                <tr key={team.abbr} className="border-t border-border hover:bg-secondary/50 transition-colors">
+                <tr key={team.abbr} className="hover:bg-secondary/50 transition-colors">
                   <td className="px-4 py-2 sticky left-0 bg-card z-10">
                     <div className="flex items-center gap-2">
                       <span className="w-6 h-6 rounded bg-secondary flex items-center justify-center text-card-foreground text-[9px] font-bold font-heading shrink-0">
