@@ -99,7 +99,7 @@ export default function TopPerformersCard() {
   const [activeTab, setActiveTab] = useState<Position>("MVP");
 
   return (
-    <div className="bg-card rounded-lg border border-border">
+    <div className="bg-card rounded-lg border border-border card-glow">
       <div className="px-5 py-3.5 border-b border-border">
         <h3 className="font-heading text-sm font-bold uppercase tracking-wide text-card-foreground">
           Top Performers

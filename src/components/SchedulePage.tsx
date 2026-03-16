@@ -69,7 +69,7 @@ export default function SchedulePage() {
       </div>
 
       {viewMode === "grid" ? (
-        <div className="bg-card rounded-lg border border-border overflow-x-auto">
+        <div className="bg-card rounded-lg border border-border card-glow overflow-x-auto">
           <table className="w-full text-xs">
             <thead>
               <tr className="text-[10px] uppercase tracking-wider text-muted-foreground">
@@ -135,7 +135,7 @@ export default function SchedulePage() {
               <ChevronRight className="w-4 h-4" />
             </button>
           </div>
-          <div className="bg-card rounded-lg border border-border divide-y divide-border">
+          <div className="bg-card rounded-lg border border-border card-glow divide-y divide-border">
             {schedule[selectedWeek].map((game, i) => (
               <div key={i} className="px-4 py-3 flex items-center justify-between">
                 <div className="flex items-center gap-2.5 flex-1 min-w-0">

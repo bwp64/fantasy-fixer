@@ -41,7 +41,7 @@ export default function PowerRankingsPage() {
         <span className="text-[11px] font-medium text-muted-foreground uppercase tracking-wider">Preseason</span>
       </div>
 
-      <div className="bg-card rounded-lg border border-border">
+      <div className="bg-card rounded-lg border border-border card-glow">
         <div className="overflow-x-auto">
           <table className="w-full text-sm">
             <thead>
