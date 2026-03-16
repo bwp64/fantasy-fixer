@@ -167,7 +167,7 @@ export default function TopPerformersCard() {
         ))}
       </div>
 
-      <div className="px-5 py-3 border-t border-border">
+      <div className="px-5 py-3">
         <a
           href="https://www44.myfantasyleague.com/2026/top?L=57893"
           target="_blank"

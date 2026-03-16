@@ -156,7 +156,7 @@ export default function XFeedCard() {
         </span>
       </div>
 
-      <div className="divide-y divide-border">
+      <div>
         {tweets.map((tweet, i) => (
           <article
             key={i}
