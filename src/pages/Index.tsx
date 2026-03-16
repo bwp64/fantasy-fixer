@@ -53,14 +53,16 @@ const Index = () => {
         );
       default:
         return (
-          <div className="max-w-3xl space-y-0">
-            <TransactionsCard />
-            <div className="border-b border-border" />
-            <XFeedCard />
-            <div className="border-b border-border" />
-            <PowerRankingsPage />
-            <div className="border-b border-border" />
-            <TopPerformersCard />
+          <div className="grid grid-cols-1 xl:grid-cols-[1fr_420px] gap-4 md:gap-6">
+            <div className="space-y-4 md:space-y-6">
+              <StandingsCard />
+              <MatchupsCard />
+            </div>
+            <div className="space-y-4 md:space-y-6">
+              <TopPerformersCard />
+              <TransactionsCard />
+              <XFeedCard />
+            </div>
           </div>
         );
     }
