@@ -14,8 +14,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        heading: ["Geist Mono", "monospace"],
-        body: ["Geist Mono", "monospace"],
+        heading: ["Soehne Mono", "monospace"],
+        body: ["Soehne Mono", "monospace"],
       },
       colors: {
         border: "hsl(var(--border))",
