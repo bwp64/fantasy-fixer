@@ -1,7 +1,7 @@
 export default function TransactionsCard() {
   return (
     <div className="bg-card rounded-lg border border-border card-glow">
-      <div className="px-5 py-3.5 border-b border-border">
+      <div className="px-5 py-3.5">
         <h3 className="font-heading text-sm font-bold uppercase tracking-wide text-card-foreground">
           Transactions
         </h3>

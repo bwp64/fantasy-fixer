@@ -57,7 +57,7 @@ export default function PowerRankingsPage() {
               {rankings.map((team) => {
                 const diff = team.prev - team.rank;
                 return (
-                  <tr key={team.abbr} className="border-t border-border hover:bg-secondary/50 transition-colors">
+                  <tr key={team.abbr} className="hover:bg-secondary/50 transition-colors">
                     <td className="px-5 py-3">
                       <span className={`font-heading text-lg font-bold tabular-nums ${
                         team.rank <= 3 ? "text-accent" : "text-card-foreground"

@@ -42,7 +42,7 @@ export default function StandingsCard() {
             onClick={() => setActiveDivision(div)}
             className={`flex-1 px-4 py-2.5 text-xs font-heading font-bold uppercase tracking-wider transition-colors ${
               activeDivision === div
-                ? "text-accent border-b-2 border-accent"
+                ? "text-accent"
                 : "text-muted-foreground hover:text-card-foreground"
             }`}
           >

@@ -41,7 +41,7 @@ export default function MatchupsCard() {
           </button>
         </div>
       </div>
-      <div className="divide-y divide-border">
+      <div>
         {matchups.map((m, i) => (
           <div key={i} className="px-4 py-3 hover:bg-secondary/50 transition-colors">
             <div className="flex items-center justify-between">
