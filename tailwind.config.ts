@@ -14,8 +14,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        heading: ["Disket Mono", "monospace"],
-        body: ["Disket Mono", "monospace"],
+        heading: ["Geist Mono", "monospace"],
+        body: ["Geist Mono", "monospace"],
       },
       colors: {
         border: "hsl(var(--border))",

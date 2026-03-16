@@ -79,8 +79,8 @@
   --sidebar-muted:               hsl(0, 0%, 45%);
 
   /* Typography */
-  --font-heading: 'Disket Mono', monospace;
-  --font-body:    'Disket Mono', monospace;
+  --font-heading: 'Geist Mono', monospace;
+  --font-body:    'Geist Mono', monospace;
 }
 
 /* ——— Base Styles ——— */
