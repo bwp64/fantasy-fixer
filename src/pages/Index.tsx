@@ -39,7 +39,7 @@ const Index = () => {
         );
       case "Player Stats":
         return (
-          <div className="bg-card rounded-lg border border-border px-5 py-10 text-center">
+          <div className="bg-card rounded-lg border border-border card-glow px-5 py-10 text-center">
             <h2 className="font-heading text-lg font-bold uppercase tracking-wide text-card-foreground mb-2">Player Stats</h2>
             <p className="text-sm text-muted-foreground">Player statistics will populate once the season begins.</p>
           </div>
