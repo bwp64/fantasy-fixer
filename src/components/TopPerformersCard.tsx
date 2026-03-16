@@ -122,7 +122,7 @@ export default function TopPerformersCard() {
         ))}
       </div>
 
-      <div className="divide-y divide-border">
+      <div>
         {topPlayers[activeTab].map((p) => (
           <a
             key={`${activeTab}-${p.playerId}`}
