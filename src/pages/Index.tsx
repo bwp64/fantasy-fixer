@@ -9,6 +9,8 @@ import TransactionsCard from "@/components/TransactionsCard";
 import XFeedCard from "@/components/XFeedCard";
 import ChampionFooter from "@/components/ChampionFooter";
 import SchedulePage from "@/components/SchedulePage";
+import RostersPage from "@/components/RostersPage";
+import PowerRankingsPage from "@/components/PowerRankingsPage";
 import rivalriesLogo from "@/assets/rivalries-brand.svg";
 
 const Index = () => {
@@ -22,6 +24,33 @@ const Index = () => {
         return <StandingsCard />;
       case "Matchups":
         return <MatchupsCard />;
+      case "Rosters":
+        return <RostersPage />;
+      case "Power Rank":
+        return <PowerRankingsPage />;
+      case "Transactions":
+        return <TransactionsCard />;
+      case "Live Scoring":
+        return (
+          <div className="bg-card rounded-lg border border-border px-5 py-10 text-center">
+            <h2 className="font-heading text-lg font-bold uppercase tracking-wide text-card-foreground mb-2">Live Scoring</h2>
+            <p className="text-sm text-muted-foreground">Live scoring will be available once the season starts.</p>
+          </div>
+        );
+      case "Player Stats":
+        return (
+          <div className="bg-card rounded-lg border border-border px-5 py-10 text-center">
+            <h2 className="font-heading text-lg font-bold uppercase tracking-wide text-card-foreground mb-2">Player Stats</h2>
+            <p className="text-sm text-muted-foreground">Player statistics will populate once the season begins.</p>
+          </div>
+        );
+      case "Login":
+        return (
+          <div className="bg-card rounded-lg border border-border px-5 py-10 text-center">
+            <h2 className="font-heading text-lg font-bold uppercase tracking-wide text-card-foreground mb-2">Login</h2>
+            <p className="text-sm text-muted-foreground">Authentication coming soon.</p>
+          </div>
+        );
       default:
         return (
           <div className="grid grid-cols-1 xl:grid-cols-[1fr_420px] gap-4 md:gap-6">
