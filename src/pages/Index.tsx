@@ -46,7 +46,7 @@ const Index = () => {
         );
       case "Login":
         return (
-          <div className="bg-card rounded-lg border border-border px-5 py-10 text-center">
+          <div className="bg-card rounded-lg border border-border card-glow px-5 py-10 text-center">
             <h2 className="font-heading text-lg font-bold uppercase tracking-wide text-card-foreground mb-2">Login</h2>
             <p className="text-sm text-muted-foreground">Authentication coming soon.</p>
           </div>
