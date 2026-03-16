@@ -21,7 +21,7 @@
 @layer base {
   :root {
     --background: 0 0% 13%;
-    --foreground: 0 0% 97%;
+    --foreground: 0 0% 97%; /* F7F7F7 */
 
     --card: 0 0% 21%;
     --card-foreground: 0 0% 97%;
@@ -38,8 +38,8 @@
     --muted: 0 0% 23%;
     --muted-foreground: 0 0% 50%;
 
-    --accent: 217 91% 60%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 0 0% 83%;
+    --accent-foreground: 0 0% 13%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
@@ -47,25 +47,25 @@
     --success: 160 60% 45%;
     --success-foreground: 0 0% 100%;
 
-    --pos-qb: 217 91% 60%;
+    --pos-qb: 0 0% 83%;
     --pos-rb: 160 60% 45%;
     --pos-wr: 38 92% 50%;
     --pos-te: 270 60% 55%;
 
     --border: 0 0% 29%;
     --input: 0 0% 29%;
-    --ring: 217 91% 60%;
+    --ring: 0 0% 83%;
 
     --radius: 0.375rem;
 
     --sidebar-background: 0 0% 10%;
     --sidebar-foreground: 0 0% 90%;
-    --sidebar-primary: 217 91% 60%;
+    --sidebar-primary: 0 0% 83%;
     --sidebar-primary-foreground: 0 0% 100%;
     --sidebar-accent: 0 0% 16%;
     --sidebar-accent-foreground: 0 0% 90%;
     --sidebar-border: 0 0% 16%;
-    --sidebar-ring: 217 91% 60%;
+    --sidebar-ring: 0 0% 83%;
     --sidebar-muted: 0 0% 45%;
 
     --font-heading: 'SF Compact Display', sans-serif;
