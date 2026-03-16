@@ -106,7 +106,7 @@ export default function TopPerformersCard() {
         </h3>
       </div>
 
-      <div className="flex border-b border-border">
+      <div className="flex">
         {positions.map((tab) => (
           <button
             key={tab}
