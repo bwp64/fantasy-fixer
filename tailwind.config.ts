@@ -14,8 +14,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        heading: ["SF Compact Display", "sans-serif"],
-        body: ["SF Compact Text", "sans-serif"],
+        heading: ["Disket Mono", "monospace"],
+        body: ["Disket Mono", "monospace"],
       },
       colors: {
         border: "hsl(var(--border))",
