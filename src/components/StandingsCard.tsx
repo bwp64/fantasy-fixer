@@ -35,7 +35,7 @@ export default function StandingsCard() {
         <span className="text-[11px] font-medium text-muted-foreground uppercase tracking-wider">Preseason</span>
       </div>
 
-      <div className="flex border-b border-border">
+      <div className="flex">
         {divisionTabs.map((div) => (
           <button
             key={div}
