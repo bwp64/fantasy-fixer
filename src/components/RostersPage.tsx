@@ -213,7 +213,7 @@ export default function RostersPage() {
         {rosters.map((team) => {
           const isExpanded = expandedTeam === team.abbr;
           return (
-            <div key={team.abbr} className="bg-card rounded-lg border border-border overflow-hidden">
+            <div key={team.abbr} className="bg-card rounded-lg border border-border card-glow overflow-hidden">
               <button
                 onClick={() => setExpandedTeam(isExpanded ? null : team.abbr)}
                 className="w-full px-5 py-3.5 flex items-center justify-between hover:bg-secondary/50 transition-colors"
