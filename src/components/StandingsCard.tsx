@@ -65,10 +65,10 @@ export default function StandingsCard() {
           </thead>
           <tbody>
             {divisions[activeDivision].map((team) => (
-              <tr
-                key={team.abbr}
-                className="border-t border-border hover:bg-secondary/50 transition-colors"
-              >
+                <tr
+                  key={team.abbr}
+                  className="hover:bg-secondary/50 transition-colors"
+                >
                 <td className="px-5 py-2.5">
                   <div className="flex items-center gap-2.5">
                     <span className="w-7 h-7 rounded bg-secondary flex items-center justify-center text-card-foreground text-[10px] font-bold font-heading shrink-0">
