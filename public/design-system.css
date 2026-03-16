@@ -1,0 +1,138 @@
+/*
+ * Rivalries Design System
+ * Standalone CSS — copy into any project
+ */
+
+/* ——— Fonts ——— */
+@font-face {
+  font-family: 'SF Compact Display';
+  src: url('/fonts/SF-Compact-Display-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SF Compact Text';
+  src: url('/fonts/SF-Compact-Text-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ——— Design Tokens ——— */
+:root {
+  /* Surface & Text */
+  --background:           hsl(0, 0%, 13%);      /* #212121 */
+  --foreground:           hsl(0, 0%, 97%);       /* #F7F7F7 */
+  --card:                 hsl(0, 0%, 21%);       /* #363636 */
+  --card-foreground:      hsl(0, 0%, 97%);
+  --popover:              hsl(0, 0%, 18%);
+  --popover-foreground:   hsl(0, 0%, 97%);
+
+  /* Primary */
+  --primary:              hsl(0, 0%, 97%);
+  --primary-foreground:   hsl(0, 0%, 13%);
+
+  /* Secondary */
+  --secondary:            hsl(0, 0%, 23%);
+  --secondary-foreground: hsl(0, 0%, 97%);
+
+  /* Muted */
+  --muted:                hsl(0, 0%, 23%);
+  --muted-foreground:     hsl(0, 0%, 50%);
+
+  /* Accent */
+  --accent:               hsl(0, 0%, 83%);
+  --accent-foreground:    hsl(0, 0%, 13%);
+
+  /* Feedback */
+  --destructive:          hsl(0, 84%, 60%);
+  --destructive-foreground: hsl(0, 0%, 100%);
+  --success:              hsl(160, 60%, 45%);
+  --success-foreground:   hsl(0, 0%, 100%);
+
+  /* Position Colors */
+  --pos-qb: hsl(0, 0%, 83%);
+  --pos-rb: hsl(160, 60%, 45%);
+  --pos-wr: hsl(38, 92%, 50%);
+  --pos-te: hsl(270, 60%, 55%);
+
+  /* Borders & Strokes */
+  --border:       hsl(0, 0%, 29%);   /* #4A4A4A */
+  --card-stroke:  hsl(0, 0%, 29%);
+  --input:        hsl(0, 0%, 29%);
+  --ring:         hsl(0, 0%, 83%);
+
+  /* Radius */
+  --radius: 0.875rem;                /* 14px — Apple-style */
+
+  /* Sidebar */
+  --sidebar-background:          hsl(0, 0%, 10%);
+  --sidebar-foreground:          hsl(0, 0%, 90%);
+  --sidebar-primary:             hsl(0, 0%, 83%);
+  --sidebar-primary-foreground:  hsl(0, 0%, 100%);
+  --sidebar-accent:              hsl(0, 0%, 16%);
+  --sidebar-accent-foreground:   hsl(0, 0%, 90%);
+  --sidebar-border:              hsl(0, 0%, 16%);
+  --sidebar-ring:                hsl(0, 0%, 83%);
+  --sidebar-muted:               hsl(0, 0%, 45%);
+
+  /* Typography */
+  --font-heading: 'SF Compact Display', sans-serif;
+  --font-body:    'SF Compact Text', sans-serif;
+}
+
+/* ——— Base Styles ——— */
+* {
+  box-sizing: border-box;
+  border-color: var(--border);
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body);
+  font-size: 15px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}
+
+/* ——— Card ——— */
+.card {
+  background: var(--card);
+  color: var(--card-foreground);
+  border: 1px solid var(--card-stroke);
+  border-radius: var(--radius);
+  box-shadow:
+    0 0 20px 2px rgba(255, 255, 255, 0.04),
+    0 0 40px 4px rgba(255, 255, 255, 0.02);
+}
+
+/* ——— Utility Classes ——— */
+.font-heading { font-family: var(--font-heading); }
+.font-body    { font-family: var(--font-body); }
+
+.card-glow {
+  box-shadow:
+    0 0 20px 2px rgba(255, 255, 255, 0.04),
+    0 0 40px 4px rgba(255, 255, 255, 0.02);
+}
+
+/* ——— Jitter Hover Animation ——— */
+@keyframes jitter {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  20%      { transform: translate(-1px, 1px) rotate(-2deg); }
+  40%      { transform: translate(1px, -1px) rotate(2deg); }
+  60%      { transform: translate(-1px, 0px) rotate(-1deg); }
+  80%      { transform: translate(1px, 1px) rotate(1deg); }
+}
+
+.icon-jitter:hover {
+  animation: jitter 0.25s ease-in-out;
+}
