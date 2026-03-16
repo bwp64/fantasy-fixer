@@ -28,21 +28,21 @@ export default function StandingsCard() {
 
   return (
     <div className="bg-card rounded-lg border border-border card-glow">
-      <div className="px-5 py-3.5 border-b border-border flex items-center justify-between">
+      <div className="px-5 py-3.5 flex items-center justify-between">
         <h3 className="font-heading text-sm font-bold uppercase tracking-wide text-card-foreground">
           Standings
         </h3>
         <span className="text-[11px] font-medium text-muted-foreground uppercase tracking-wider">Preseason</span>
       </div>
 
-      <div className="flex border-b border-border">
+      <div className="flex">
         {divisionTabs.map((div) => (
           <button
             key={div}
             onClick={() => setActiveDivision(div)}
             className={`flex-1 px-4 py-2.5 text-xs font-heading font-bold uppercase tracking-wider transition-colors ${
               activeDivision === div
-                ? "text-accent border-b-2 border-accent"
+                ? "text-accent"
                 : "text-muted-foreground hover:text-card-foreground"
             }`}
           >

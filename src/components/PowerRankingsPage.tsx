@@ -45,7 +45,7 @@ export default function PowerRankingsPage() {
         <div className="overflow-x-auto">
           <table className="w-full text-sm">
             <thead>
-              <tr className="text-[11px] uppercase tracking-wider text-muted-foreground border-b border-border">
+              <tr className="text-[11px] uppercase tracking-wider text-muted-foreground">
                 <th className="text-left px-5 py-3 font-medium w-12">#</th>
                 <th className="text-left py-3 font-medium">Team</th>
                 <th className="text-center px-3 py-3 font-medium w-16">Trend</th>
@@ -57,7 +57,7 @@ export default function PowerRankingsPage() {
               {rankings.map((team) => {
                 const diff = team.prev - team.rank;
                 return (
-                  <tr key={team.abbr} className="border-t border-border hover:bg-secondary/50 transition-colors">
+                  <tr key={team.abbr} className="hover:bg-secondary/50 transition-colors">
                     <td className="px-5 py-3">
                       <span className={`font-heading text-lg font-bold tabular-nums ${
                         team.rank <= 3 ? "text-accent" : "text-card-foreground"

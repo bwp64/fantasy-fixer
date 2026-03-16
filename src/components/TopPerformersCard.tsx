@@ -100,13 +100,13 @@ export default function TopPerformersCard() {
 
   return (
     <div className="bg-card rounded-lg border border-border card-glow">
-      <div className="px-5 py-3.5 border-b border-border">
+      <div className="px-5 py-3.5">
         <h3 className="font-heading text-sm font-bold uppercase tracking-wide text-card-foreground">
           Top Performers
         </h3>
       </div>
 
-      <div className="flex border-b border-border">
+      <div className="flex">
         {positions.map((tab) => (
           <button
             key={tab}
@@ -122,7 +122,7 @@ export default function TopPerformersCard() {
         ))}
       </div>
 
-      <div className="divide-y divide-border">
+      <div>
         {topPlayers[activeTab].map((p) => (
           <a
             key={`${activeTab}-${p.playerId}`}
@@ -167,7 +167,7 @@ export default function TopPerformersCard() {
         ))}
       </div>
 
-      <div className="px-5 py-3 border-t border-border">
+      <div className="px-5 py-3">
         <a
           href="https://www44.myfantasyleague.com/2026/top?L=57893"
           target="_blank"

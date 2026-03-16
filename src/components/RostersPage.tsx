@@ -236,7 +236,7 @@ export default function RostersPage() {
               </button>
 
               {isExpanded && (
-                <div className="border-t border-border divide-y divide-border">
+                <div>
                   {team.roster.map((slot, i) => (
                     <a
                       key={i}
