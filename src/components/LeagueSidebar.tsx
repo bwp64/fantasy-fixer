@@ -15,7 +15,7 @@ type NavItem = {
 };
 
 const navItems: NavItem[] = [
-  { label: "Dashboard", svgSrc: homeIcon },
+  { label: "Home", svgSrc: homeIcon },
   { label: "Standings", svgSrc: standingsIcon },
   { label: "Matchups", svgSrc: matchupsIcon },
   { label: "Rosters", svgSrc: jerseyIcon },
