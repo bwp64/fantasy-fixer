@@ -1,3 +1,32 @@
+/* Söhne Mono — Full Weight Range */
+@font-face {
+  font-family: 'Soehne Mono';
+  src: url('/fonts/SoehneMono-Extraleicht.woff2') format('woff2');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Soehne Mono';
+  src: url('/fonts/SoehneMono-ExtraleichtKursiv.woff2') format('woff2');
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Soehne Mono';
+  src: url('/fonts/SoehneMono-Leicht.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Soehne Mono';
+  src: url('/fonts/SoehneMono-LeichtKursiv.woff2') format('woff2');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
 @font-face {
   font-family: 'Soehne Mono';
   src: url('/fonts/SoehneMono-Buch.woff2') format('woff2');
@@ -5,7 +34,6 @@
   font-style: normal;
   font-display: swap;
 }
-
 @font-face {
   font-family: 'Soehne Mono';
   src: url('/fonts/SoehneMono-BuchKursiv.woff2') format('woff2');
@@ -13,7 +41,34 @@
   font-style: italic;
   font-display: swap;
 }
-
+@font-face {
+  font-family: 'Soehne Mono';
+  src: url('/fonts/SoehneMono-Kraftig.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Soehne Mono';
+  src: url('/fonts/SoehneMono-KraftigKursiv.woff2') format('woff2');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Soehne Mono';
+  src: url('/fonts/SoehneMono-Halbfett.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Soehne Mono';
+  src: url('/fonts/SoehneMono-HalbfettKursiv.woff2') format('woff2');
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
 @font-face {
   font-family: 'Soehne Mono';
   src: url('/fonts/SoehneMono-Dreiviertelfett.woff2') format('woff2');
@@ -21,11 +76,38 @@
   font-style: normal;
   font-display: swap;
 }
-
 @font-face {
   font-family: 'Soehne Mono';
   src: url('/fonts/SoehneMono-DreiviertelfettKursiv.woff2') format('woff2');
   font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Soehne Mono';
+  src: url('/fonts/SoehneMono-Fett.woff2') format('woff2');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Soehne Mono';
+  src: url('/fonts/SoehneMono-FettKursiv.woff2') format('woff2');
+  font-weight: 800;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Soehne Mono';
+  src: url('/fonts/SoehneMono-Extrafett.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Soehne Mono';
+  src: url('/fonts/SoehneMono-ExtrafettKursiv.woff2') format('woff2');
+  font-weight: 900;
   font-style: italic;
   font-display: swap;
 }
