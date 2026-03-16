@@ -5,16 +5,16 @@
 
 /* ——— Fonts ——— */
 @font-face {
-  font-family: 'Disket Mono';
-  src: url('/fonts/DisketMono-Regular.woff') format('woff');
-  font-weight: 400;
+  font-family: 'Geist Mono';
+  src: url('/fonts/GeistMono-Medium.woff2') format('woff2');
+  font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Disket Mono';
-  src: url('/fonts/DisketMono-Bold.woff') format('woff');
+  font-family: 'Geist Mono';
+  src: url('/fonts/GeistMono-Bold.woff2') format('woff2');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
