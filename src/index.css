@@ -1,114 +1,65 @@
-/* Söhne Mono — Full Weight Range */
+/* SF Compact Display — Full Weight Range */
 @font-face {
-  font-family: 'Soehne Mono';
-  src: url('/fonts/SoehneMono-Extraleicht.woff2') format('woff2');
+  font-family: 'SF Compact Display';
+  src: url('/fonts/SFCompactDisplay-Thin.woff2') format('woff2');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'SF Compact Display';
+  src: url('/fonts/SFCompactDisplay-Ultralight.woff2') format('woff2');
   font-weight: 200;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: 'Soehne Mono';
-  src: url('/fonts/SoehneMono-ExtraleichtKursiv.woff2') format('woff2');
-  font-weight: 200;
-  font-style: italic;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Soehne Mono';
-  src: url('/fonts/SoehneMono-Leicht.woff2') format('woff2');
+  font-family: 'SF Compact Display';
+  src: url('/fonts/SFCompactDisplay-Light.woff2') format('woff2');
   font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: 'Soehne Mono';
-  src: url('/fonts/SoehneMono-LeichtKursiv.woff2') format('woff2');
-  font-weight: 300;
-  font-style: italic;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Soehne Mono';
-  src: url('/fonts/SoehneMono-Buch.woff2') format('woff2');
+  font-family: 'SF Compact Display';
+  src: url('/fonts/SFCompactDisplay-Regular.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: 'Soehne Mono';
-  src: url('/fonts/SoehneMono-BuchKursiv.woff2') format('woff2');
-  font-weight: 400;
-  font-style: italic;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Soehne Mono';
-  src: url('/fonts/SoehneMono-Kraftig.woff2') format('woff2');
+  font-family: 'SF Compact Display';
+  src: url('/fonts/SFCompactDisplay-Medium.woff2') format('woff2');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: 'Soehne Mono';
-  src: url('/fonts/SoehneMono-KraftigKursiv.woff2') format('woff2');
-  font-weight: 500;
-  font-style: italic;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Soehne Mono';
-  src: url('/fonts/SoehneMono-Halbfett.woff2') format('woff2');
+  font-family: 'SF Compact Display';
+  src: url('/fonts/SFCompactDisplay-Semibold.woff2') format('woff2');
   font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: 'Soehne Mono';
-  src: url('/fonts/SoehneMono-HalbfettKursiv.woff2') format('woff2');
-  font-weight: 600;
-  font-style: italic;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Soehne Mono';
-  src: url('/fonts/SoehneMono-Dreiviertelfett.woff2') format('woff2');
+  font-family: 'SF Compact Display';
+  src: url('/fonts/SFCompactDisplay-Bold.woff2') format('woff2');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: 'Soehne Mono';
-  src: url('/fonts/SoehneMono-DreiviertelfettKursiv.woff2') format('woff2');
-  font-weight: 700;
-  font-style: italic;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Soehne Mono';
-  src: url('/fonts/SoehneMono-Fett.woff2') format('woff2');
+  font-family: 'SF Compact Display';
+  src: url('/fonts/SFCompactDisplay-Heavy.woff2') format('woff2');
   font-weight: 800;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: 'Soehne Mono';
-  src: url('/fonts/SoehneMono-FettKursiv.woff2') format('woff2');
-  font-weight: 800;
-  font-style: italic;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Soehne Mono';
-  src: url('/fonts/SoehneMono-Extrafett.woff2') format('woff2');
+  font-family: 'SF Compact Display';
+  src: url('/fonts/SFCompactDisplay-Black.woff2') format('woff2');
   font-weight: 900;
   font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Soehne Mono';
-  src: url('/fonts/SoehneMono-ExtrafettKursiv.woff2') format('woff2');
-  font-weight: 900;
-  font-style: italic;
   font-display: swap;
 }
 
@@ -119,7 +70,7 @@
 @layer base {
   :root {
     --background: 0 0% 13%;
-    --foreground: 0 0% 97%; /* F7F7F7 */
+    --foreground: 0 0% 97%;
 
     --card: 0 0% 21%;
     --card-foreground: 0 0% 97%;
@@ -167,8 +118,8 @@
     --sidebar-ring: 0 0% 83%;
     --sidebar-muted: 0 0% 45%;
 
-    --font-heading: 'Soehne Mono', monospace;
-    --font-body: 'Soehne Mono', monospace;
+    --font-heading: 'SF Compact Display', -apple-system, sans-serif;
+    --font-body: 'SF Compact Display', -apple-system, sans-serif;
   }
 }
 
@@ -178,7 +129,6 @@
   }
   body {
     @apply bg-background text-foreground font-body antialiased font-medium;
-    font-size: 15px;
     font-size: 15px;
   }
   h1, h2, h3, h4, h5, h6 {

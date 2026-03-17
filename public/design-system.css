@@ -5,17 +5,65 @@
 
 /* ——— Fonts ——— */
 @font-face {
-  font-family: 'Geist Mono';
-  src: url('/fonts/GeistMono-Medium.woff2') format('woff2');
+  font-family: 'SF Compact Display';
+  src: url('/fonts/SFCompactDisplay-Thin.woff2') format('woff2');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'SF Compact Display';
+  src: url('/fonts/SFCompactDisplay-Ultralight.woff2') format('woff2');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'SF Compact Display';
+  src: url('/fonts/SFCompactDisplay-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'SF Compact Display';
+  src: url('/fonts/SFCompactDisplay-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'SF Compact Display';
+  src: url('/fonts/SFCompactDisplay-Medium.woff2') format('woff2');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
-
 @font-face {
-  font-family: 'Geist Mono';
-  src: url('/fonts/GeistMono-Bold.woff2') format('woff2');
+  font-family: 'SF Compact Display';
+  src: url('/fonts/SFCompactDisplay-Semibold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'SF Compact Display';
+  src: url('/fonts/SFCompactDisplay-Bold.woff2') format('woff2');
   font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'SF Compact Display';
+  src: url('/fonts/SFCompactDisplay-Heavy.woff2') format('woff2');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'SF Compact Display';
+  src: url('/fonts/SFCompactDisplay-Black.woff2') format('woff2');
+  font-weight: 900;
   font-style: normal;
   font-display: swap;
 }
@@ -23,9 +71,9 @@
 /* ——— Design Tokens ——— */
 :root {
   /* Surface & Text */
-  --background:           hsl(0, 0%, 13%);      /* #212121 */
-  --foreground:           hsl(0, 0%, 97%);       /* #F7F7F7 */
-  --card:                 hsl(0, 0%, 21%);       /* #363636 */
+  --background:           hsl(0, 0%, 13%);
+  --foreground:           hsl(0, 0%, 97%);
+  --card:                 hsl(0, 0%, 21%);
   --card-foreground:      hsl(0, 0%, 97%);
   --popover:              hsl(0, 0%, 18%);
   --popover-foreground:   hsl(0, 0%, 97%);
@@ -59,13 +107,13 @@
   --pos-te: hsl(270, 60%, 55%);
 
   /* Borders & Strokes */
-  --border:       hsl(0, 0%, 29%);   /* #4A4A4A */
+  --border:       hsl(0, 0%, 29%);
   --card-stroke:  hsl(0, 0%, 29%);
   --input:        hsl(0, 0%, 29%);
   --ring:         hsl(0, 0%, 83%);
 
   /* Radius */
-  --radius: 0.875rem;                /* 14px — Apple-style */
+  --radius: 0.875rem;
 
   /* Sidebar */
   --sidebar-background:          hsl(0, 0%, 10%);
@@ -79,8 +127,8 @@
   --sidebar-muted:               hsl(0, 0%, 45%);
 
   /* Typography */
-  --font-heading: 'Geist Mono', monospace;
-  --font-body:    'Geist Mono', monospace;
+  --font-heading: 'SF Compact Display', -apple-system, sans-serif;
+  --font-body:    'SF Compact Display', -apple-system, sans-serif;
 }
 
 /* ——— Base Styles ——— */
