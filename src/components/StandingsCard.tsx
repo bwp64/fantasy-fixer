@@ -77,11 +77,11 @@ export default function StandingsCard() {
                     <span className="font-medium text-card-foreground text-sm">{team.name}</span>
                   </div>
                 </td>
-                <td className="text-right px-3 py-2.5 font-mono text-xs text-card-foreground">{team.record}</td>
-                <td className="text-right px-3 py-2.5 font-mono text-xs text-muted-foreground hidden sm:table-cell">{team.pct}</td>
-                <td className="text-right px-3 py-2.5 font-mono text-xs text-card-foreground hidden sm:table-cell">{team.avgPF}</td>
-                <td className="text-right px-3 py-2.5 font-mono text-xs text-muted-foreground hidden sm:table-cell">{team.avgPA}</td>
-                <td className="text-right px-5 py-2.5 font-mono text-xs text-muted-foreground">{team.pwr}</td>
+                <td className="text-right px-3 py-2.5 tabular-nums text-xs text-card-foreground">{team.record}</td>
+                <td className="text-right px-3 py-2.5 tabular-nums text-xs text-muted-foreground hidden sm:table-cell">{team.pct}</td>
+                <td className="text-right px-3 py-2.5 tabular-nums text-xs text-card-foreground hidden sm:table-cell">{team.avgPF}</td>
+                <td className="text-right px-3 py-2.5 tabular-nums text-xs text-muted-foreground hidden sm:table-cell">{team.avgPA}</td>
+                <td className="text-right px-5 py-2.5 tabular-nums text-xs text-muted-foreground">{team.pwr}</td>
               </tr>
             ))}
           </tbody>
