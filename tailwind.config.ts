@@ -14,8 +14,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        heading: ["Soehne Mono", "monospace"],
-        body: ["Soehne Mono", "monospace"],
+        heading: ["SF Compact Display", "-apple-system", "sans-serif"],
+        body: ["SF Compact Display", "-apple-system", "sans-serif"],
       },
       colors: {
         border: "hsl(var(--border))",
