@@ -85,10 +85,10 @@ export default function PowerRankingsPage() {
                         )}
                       </div>
                     </td>
-                    <td className="text-right px-3 py-3 font-mono text-xs text-muted-foreground hidden sm:table-cell">
+                    <td className="text-right px-3 py-3 tabular-nums text-xs text-muted-foreground hidden sm:table-cell">
                       {team.record}
                     </td>
-                    <td className="text-right px-5 py-3 font-mono text-xs text-muted-foreground">
+                    <td className="text-right px-5 py-3 tabular-nums text-xs text-muted-foreground">
                       {team.prev}
                     </td>
                   </tr>
