@@ -140,7 +140,7 @@ export default function TopPerformersCard() {
                 width={96}
                 height={96}
                 decoding="async"
-                className={`rounded-full object-cover border-2 bg-secondary ${posBorderMap[p.pos] || "border-border"}`}
+                className="rounded-full object-cover border-2 border-border bg-secondary"
                 style={{ width: 45, height: 45 }}
                 loading="lazy"
               />
