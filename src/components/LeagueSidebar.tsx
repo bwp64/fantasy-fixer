@@ -62,7 +62,7 @@ export default function LeagueSidebar({
               key={item.label}
               onClick={() => onNavigate?.(item.label)}
               title={item.label}
-              className={`relative flex items-center justify-center w-9 h-9 rounded-lg transition-colors ${
+              className={`relative flex items-center justify-center w-11 h-11 rounded-lg transition-colors ${
                 isActive
                   ? "bg-sidebar-accent"
                   : "hover:bg-sidebar-accent/50"
