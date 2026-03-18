@@ -41,14 +41,14 @@ export default function LeagueSidebar({
         <img
           src={trophyIcon}
           alt=""
-          className="h-5 w-5 icon-jitter"
+           className="h-8 w-8 icon-jitter"
           style={{ filter: "brightness(0) invert(0.55)" }}
         />
         <img src={rivalriesLogo} alt="Rivalries" className="h-5 shrink-0" />
         <img
           src={trophyIcon}
           alt=""
-          className="h-5 w-5 icon-jitter"
+           className="h-8 w-8 icon-jitter"
           style={{ filter: "brightness(0) invert(0.55)" }}
         />
       </div>
@@ -62,7 +62,7 @@ export default function LeagueSidebar({
               key={item.label}
               onClick={() => onNavigate?.(item.label)}
               title={item.label}
-              className={`relative flex items-center justify-center w-9 h-9 rounded-lg transition-colors ${
+              className={`relative flex items-center justify-center w-11 h-11 rounded-lg transition-colors ${
                 isActive
                   ? "bg-sidebar-accent"
                   : "hover:bg-sidebar-accent/50"
@@ -71,7 +71,7 @@ export default function LeagueSidebar({
               <img
                 src={item.svgSrc}
                 alt={item.label}
-                className="w-[18px] h-[18px] icon-jitter"
+                className="w-8 h-8 icon-jitter"
                 style={{
                   filter: isActive
                     ? "brightness(0) invert(0.85)"
