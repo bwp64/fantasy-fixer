@@ -145,6 +145,11 @@
   }
   .card-glow {
     box-shadow: 0 0 20px 2px rgba(255, 255, 255, 0.04), 0 0 40px 4px rgba(255, 255, 255, 0.02);
+    transition: transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.35s ease;
+  }
+  .card-glow:hover {
+    transform: scale(1.015);
+    box-shadow: 0 0 28px 4px rgba(255, 255, 255, 0.06), 0 0 56px 8px rgba(255, 255, 255, 0.03);
   }
 }
 
