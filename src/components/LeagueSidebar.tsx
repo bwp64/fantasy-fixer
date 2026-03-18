@@ -41,14 +41,14 @@ export default function LeagueSidebar({
         <img
           src={trophyIcon}
           alt=""
-          className="h-5 w-5 icon-jitter"
+           className="h-8 w-8 icon-jitter"
           style={{ filter: "brightness(0) invert(0.55)" }}
         />
         <img src={rivalriesLogo} alt="Rivalries" className="h-5 shrink-0" />
         <img
           src={trophyIcon}
           alt=""
-          className="h-5 w-5 icon-jitter"
+           className="h-8 w-8 icon-jitter"
           style={{ filter: "brightness(0) invert(0.55)" }}
         />
       </div>
