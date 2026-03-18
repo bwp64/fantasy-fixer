@@ -71,7 +71,7 @@ export default function LeagueSidebar({
               <img
                 src={item.svgSrc}
                 alt={item.label}
-                className="w-[18px] h-[18px] icon-jitter"
+                className="w-8 h-8 icon-jitter"
                 style={{
                   filter: isActive
                     ? "brightness(0) invert(0.85)"
