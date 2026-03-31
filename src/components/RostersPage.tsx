@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { playerImgUrl } from "@/lib/playerHeadshots";
 
 type RosterSlot = {
   pos: string;
