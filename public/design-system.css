@@ -184,3 +184,77 @@ h1, h2, h3, h4, h5, h6 {
 .icon-jitter:hover {
   animation: jitter 0.25s ease-in-out;
 }
+
+/* ——— Player Headshot ——— */
+.player-headshot {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: 2px solid #D3D3D3;
+  object-fit: cover;
+  background: var(--secondary, #3a3a3a);
+  flex-shrink: 0;
+}
+
+.player-headshot--sm {
+  width: 32px;
+  height: 32px;
+}
+
+.player-headshot--lg {
+  width: 64px;
+  height: 64px;
+}
+
+/* Fallback when no image — use as a div */
+.player-headshot-fallback {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: 2px solid #D3D3D3;
+  background: var(--secondary, #3a3a3a);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-heading);
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--text-secondary, #808080);
+  flex-shrink: 0;
+}
+
+/* ——— Player Name ——— */
+.player-name-last {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--card-foreground, #F7F7F7);
+  line-height: 1.1;
+}
+
+.player-name-first {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-secondary, #808080);
+  line-height: 1.1;
+}
+
+/* ——— Position Badge ——— */
+.pos-badge {
+  font-family: var(--font-heading);
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 2px 6px;
+  border-radius: 4px;
+  text-align: center;
+  color: var(--background, #212121);
+}
+.pos-badge--qb { background: #D3D3D3; }
+.pos-badge--rb { background: #33b584; }
+.pos-badge--wr { background: #f59e0b; }
+.pos-badge--te { background: #8b5cf6; }
