@@ -26,9 +26,6 @@ const posColorMap: Record<string, string> = {
   IR: "bg-destructive/30",
 };
 
-function playerImgUrl(id: string) {
-  return `https://www.mflscripts.com/playerImages_96x96/mfl_${id}.png`;
-}
 
 const rosters: TeamRoster[] = [
   {

@@ -91,9 +91,6 @@ const posBorderMap: Record<string, string> = {
   TE: "border-pos-te",
 };
 
-function playerImgUrl(id: string) {
-  return `https://www.mflscripts.com/playerImages_96x96/mfl_${id}.png`;
-}
 
 
 export default function TopPerformersCard() {
