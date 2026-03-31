@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { playerImgUrl } from "@/lib/playerHeadshots";
 
 const positions = ["MVP", "QB", "RB", "WR", "TE"] as const;
 type Position = typeof positions[number];
