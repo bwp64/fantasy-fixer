@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { playerImgUrl } from "@/lib/playerHeadshots";
 
 const positions = ["MVP", "QB", "RB", "WR", "TE"] as const;
 type Position = typeof positions[number];
@@ -90,9 +91,6 @@ const posBorderMap: Record<string, string> = {
   TE: "border-pos-te",
 };
 
-function playerImgUrl(id: string) {
-  return `https://www.mflscripts.com/playerImages_96x96/mfl_${id}.png`;
-}
 
 
 export default function TopPerformersCard() {
